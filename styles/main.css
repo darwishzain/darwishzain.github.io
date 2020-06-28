@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+	font-family: 'Roboto Thin';
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li{
+	display: inline-flex;
+	color: white;
+	background-color: black;
+	padding: 5px 10px;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+section{
+	text-align: center;
+}
+.games{
+	display: flex;
+	flex-direction: row;
+	margin: 30px 0px 0px 0px;
+}
+.games figure{
+	text-align: center;
+	width: 320px;
+}
