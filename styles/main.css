@@ -10,6 +10,7 @@ nav ul li{
 	color: white;
 	background-color: black;
 	padding: 5px 10px;
+        margin:0px;
 }
 a{
 	text-decoration: none;
