@@ -1,0 +1,27 @@
+.nav{
+	background-color: #000000;
+}
+.nav ul li{
+	display: inline-block;
+}
+.nav ul li a{
+	padding: 5px 10px 5px 10px;
+	margin: 0px;
+	text-decoration: none;
+	color: inherit;
+	font-size: 40px;
+}
+.nav ul li a:hover{
+	color: #00AC9F;
+}
+.foot2 span{
+	display: inline-block;
+	width: 30%;
+}
+.board{
+	height: 500px;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+	color: #2E6DB4;
+}
