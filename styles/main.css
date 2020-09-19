@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron');
-body{
-	font-family: 'Roboto';
-	font-size: 15px;
-	color: #2E6DB4;
-	background-color: #FFFFFF;
-	margin: 0px;
-	padding: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
 /*Font*/
+.montserrat{
+	font-family: 'Montserrat';
+}
 .orbitron{
 	font-family: 'Orbitron';
 }
 .roboto{
 	font-family: 'Roboto';
+}
+.font15{
+	font-size: 15px;
+}
+.font30{
+	font-size: 30px;
 }
 /*Color*/
 .cadmiumred{
@@ -53,8 +55,30 @@ body{
 .bg-white{
 	background-color: #FFFFFF;
 }
-
-
+/*allign*/
+.align-center{
+	text-align: center;
+}
+.align-justify{
+	text-align: justify;
+}
+.align-left{
+	text-align: left;
+}
+.align-right{
+	text-align: right;
+}
+.align-inherit{
+	text-align: inherit;
+}
+/*float*/
+.right{
+	float:right;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
 button{
 	border: none;
 }
