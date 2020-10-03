@@ -75,6 +75,12 @@
 .right{
 	float:right;
 }
+
+/*Here's the problem*/
+.panel{
+	display: inline-flex;
+	flex-direction: column;
+}
 a{
 	text-decoration: none;
 	color: inherit;
