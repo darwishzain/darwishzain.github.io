@@ -1,90 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+/*Roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron');
+/*Orbitron*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
-/*Font*/
-.montserrat{
-	font-family: 'Montserrat';
+/*Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/*Press Start 2P*/
+body{
+	font-family: 'Press Start 2P';
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	background-color: #F0F0F0F0;
 }
-.orbitron{
-	font-family: 'Orbitron';
-}
-.roboto{
-	font-family: 'Roboto';
-}
-.font15{
-	font-size: 15px;
-}
-.font30{
-	font-size: 30px;
-}
-/*Color*/
-.cadmiumred{
-	color: #DF0024;
-}
-.persiangreen{
-	color: #00AC9F;
-}
-.celticblue{
-	color: #2E6DB4;
-}
-.goldenpoppy{
-	color: #F3C300;
-}
-.black{
-	color: #000000;
-}
-.white{
-	color: #FFFFFF;
-}
-/*Background Color*/
-.bg-cadmiumred{
-	background-color: #DF0024;
-}
-.bg-persiangreen{
-	background-color: #00AC9F;
-}
-.bg-celticblue{
-	background-color: #2E6DB4;
-}
-.bg-goldenpoppy{
-	background-color: #F3C300;
-}
-.bg-black{
-	background-color: #000000;
-}
-.bg-white{
-	background-color: #FFFFFF;
-}
-/*allign*/
-.align-center{
+.info{
 	text-align: center;
-}
-.align-justify{
-	text-align: justify;
-}
-.align-left{
-	text-align: left;
-}
-.align-right{
-	text-align: right;
-}
-.align-inherit{
-	text-align: inherit;
-}
-/*float*/
-.right{
-	float:right;
-}
-
-/*Here's the problem*/
-.panel{
-	display: inline-flex;
-	flex-direction: column;
-}
-a{
-	text-decoration: none;
-	color: inherit;
-}
-button{
-	border: none;
 }
