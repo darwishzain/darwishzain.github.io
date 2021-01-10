@@ -6,13 +6,10 @@
 /*Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*Press Start 2P*/
-body{
+ #main{
 	font-family: 'Press Start 2P';
 	margin: 0px;
 	padding: 0px;
-	font-size: 20px;
+	font-size: 2vw;
 	background-color: #F0F0F0F0;
-}
-.info{
-	text-align: center;
 }
