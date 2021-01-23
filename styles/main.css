@@ -6,10 +6,83 @@
 /*Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*Press Start 2P*/
- #main{
-	font-family: 'Press Start 2P';
+ body{
+	font-family: 'Roboto';
 	margin: 0px;
 	padding: 0px;
-	font-size: 2vw;
+	box-sizing: border-box;
 	background-color: #F0F0F0F0;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #0f0f0f;
+}
+.logo{
+  color: rgba(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.navlink{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.navlink li{
+  list-style: none;
+}
+.navlink a{
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+}
+
+/*
+@media screen and (max-width:1024px) {
+  .navlink{
+    width: 60%;
+  }
+}
+@media screen and (max-width:768px) {
+  body{
+
+  }
+  .navlink{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+  }
+}
+*/
+.product{
+  text-align: center;
+}
+.footer{
+  display:flex;
+  flex-direction: row;
+}
+.footer span{
+  width: 33%;
+}
+.footer a{
+  text-decoration: none;
+  color: inherit;
 }
