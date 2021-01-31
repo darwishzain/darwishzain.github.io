@@ -39,50 +39,18 @@ nav{
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  padding:0px 5px;
   color: white;
 }
-.burger div{
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: white;
-}
 
-/*
-@media screen and (max-width:1024px) {
-  .navlink{
-    width: 60%;
-  }
-}
-@media screen and (max-width:768px) {
-  body{
-
-  }
-  .navlink{
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: #blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-  }
-}
-*/
-.product{
+.content{
+  font-size: 5vh;
+  font-family: 'Montserrat';
   text-align: center;
 }
-.footer{
-  display:flex;
-  flex-direction: row;
+.content div{
+  margin: auto;
+  padding:  50vh 0vh;
+  height: 50vh;
 }
-.footer span{
-  width: 33%;
-}
-.footer a{
-  text-decoration: none;
-  color: inherit;
-}
+
