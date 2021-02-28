@@ -68,6 +68,20 @@ nav{
   padding: 5vh 2vh 5vh 2vh;
   width: 50%;
 }
+
+.product{
+  font-size: 10vh;
+  margin: 5vh;
+  font-family: 'Press Start 2P';
+  color: #FFFFFF;
+  text-align: center;
+}
+.detail{
+  font-size: 4vh;
+  font-family: Montserrat;
+  color: #000000;
+}
+
 .about{
   font-size: 5vh;
   font-family: 'Montserrat';
