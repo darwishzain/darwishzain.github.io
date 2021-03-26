@@ -13,6 +13,19 @@
 	box-sizing: border-box;
 	background-color: #C0C0C0;
 }
+.terminal{
+  font-weight: bold;
+  text-align: center;
+}
+.terminal p{
+  display: inline;
+}
+.g{
+  color: #39FF14;
+}
+.b{
+  color: blue;
+}
 nav{
   display: flex;
   justify-content: space-around;
