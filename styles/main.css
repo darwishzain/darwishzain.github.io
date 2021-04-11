@@ -6,94 +6,25 @@
 /*Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*Press Start 2P*/
- body{
-	font-family: 'Roboto';
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	background-color: #C0C0C0;
+body{
+  margin: 0px;
+  padding: 0px;
 }
-nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #0f0f0f;
-}
-.logo{
-  color: rgba(226, 226, 226);
-  letter-spacing: 5px;
-  font-size: 20px;
-}
-.navlink{
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-.navlink li{
-  list-style: none;
-}
-.navlink a{
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 14px;
-  padding:0px 5px;
-  color: white;
-}
-
-.content{
-  font-size: 5vh;
-  font-family: 'Montserrat';
-  text-align: center;
-}
-.content div{
-  margin: auto;
-  padding:  50vh 0vh;
-}
-.video{
-  font-size: 10vh;
-  font-family: 'Orbitron';
-  text-align: center;
-}
-.video div{
-  margin: auto;
-  padding:  2vh 0vh;
-}
-.vtable{
-  font-size: 3vh;
-  font-family: 'Roboto';
-}
-.vtable tr td{
-  padding: 5vh 2vh 5vh 2vh;
-  width: 50%;
-}
-
-.product{
-  font-size: 10vh;
-  margin: 5vh;
-  font-family: 'Press Start 2P';
-  color: #FFFFFF;
-  text-align: center;
-}
-.detail{
-  font-size: 4vh;
-  font-family: Montserrat;
-  color: #000000;
-}
-
-.about{
-  font-size: 5vh;
-  font-family: 'Montserrat';
-  text-align: center;
-  padding: 5vh 5vh 5vh 0vh;
-  margin-bottom: 100px;
-}
-footer{
+#aboutPanel{
   background-color: #000000;
-  color: #FFFFFF;
-  padding: 5vh 0vh 0vh 0vh;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  color:#FFFFFF;
+}
+#aboutPanel div{
+  display: inline-block;
+}
+#aboutAccount{
+  text-align: center;
+  font-size: 3vh;
+  padding: 20px 20px 50px 20px;
+  margin: 20px;
+  background-color: #20E9DC90;
+}
+#aboutData{
+  font-size: 50px;
+  margin: 0px 30px 10px 100px;
 }
