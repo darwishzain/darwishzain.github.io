@@ -9,22 +9,47 @@
 body{
   margin: 0px;
   padding: 0px;
+  background-color: #303030;
+  color: #ffffff;
 }
-#aboutPanel{
+.logo{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10%;
   background-color: #000000;
-  color:#FFFFFF;
+  color: #ffffff;
 }
-#aboutPanel div{
+header ul{
+  list-style: none;
+}
+header ul li{
   display: inline-block;
 }
-#aboutAccount{
-  text-align: center;
-  font-size: 3vh;
-  padding: 20px 20px 50px 20px;
-  margin: 20px;
-  background-color: #20E9DC90;
+header ul li a{
+  padding: 10px 10px;
 }
-#aboutData{
-  font-size: 50px;
-  margin: 0px 30px 10px 100px;
+#topContent div{
+  display: inline-block;
+  width: 40%;
+}
+.pageTitle{
+  background-color: #00AC9F;
+  color:#000000;
+  padding: 10px 5px;
+  margin: 0px;
+  text-align: center;
+}
+.sub{
+  text-align: center;
+}
+.hireme{
+  background-color: #2E6DB4;
 }
