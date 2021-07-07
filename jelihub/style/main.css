@@ -1,0 +1,23 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+#header{
+    background-color: limegreen;
+    color: white;
+    font-size: 20px;
+}
+.foot{
+    padding: 10px 10px 10px 10px;
+    width: 25%;
+    background-color: #f0f0f0;
+}
+#footm{
+    display: flex;
+}
