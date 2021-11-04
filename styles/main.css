@@ -6,10 +6,18 @@
 /*Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*Press Start 2P*/
+:root {
+  --one: #216afc;
+  --two:#397afd;
+  --three:#5791fd;
+  --four:#97b8fe;
+  --five:#b5cdfe;
+  --six:#cedefe;
+}
 body{
   margin: 0px;
   padding: 0px;
-  background-color: #303030;
+  background-color: var(--four);
   color: #ffffff;
 }
 .logo{
@@ -24,7 +32,7 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 5px 10%;
-  background-color: #000000;
+  background-color: var(--three);
   color: #ffffff;
 }
 header ul{
@@ -33,8 +41,23 @@ header ul{
 header ul li{
   display: inline-block;
 }
-header ul li a{
+.navigation{
+  padding: 10px;
+}
+.navigation a{
   padding: 10px 10px;
+  border-radius: 20px;
+}
+.navigation a:hover{
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.content{
+  display: inline-flex;
+}
+.content div{
+  width: 50%;
+  height: 50%;
 }
 .jeli{
   background-color: #61892F;
@@ -54,5 +77,14 @@ header ul li a{
   text-align: center;
 }
 .hireme{
-  background-color: #2E6DB4;
+  background-color: var(--one);
+}
+footer{
+  background-color: var(--three);
+}
+#foot{
+  display: inline-flex;
+}
+.foot{
+  width: 25vw;
 }
