@@ -4,17 +4,33 @@ body{
     text-align: center;
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #515356;
+    background-color: var(--bgm);
+}
+
+:root{
+    --primary:#05386B;
+    --secondary:#379683;
+    --bgm:#5CDB95;
+    --bga:#8EE4AF;
+    --accent:#EDF5E1;
 }
 a{
     text-decoration: none;
     color: inherit;
 }
+a:hover{
+    color: var(--accent);
+}
 .tab{
     padding: 10px;
-    background-color: #fcc222;
+    background-color: var(--primary);
     border-radius: 25px;
+    color: var(--accent);
 }
-div{
+.tab:hover{
+    background-color: var(--accent);
+    color: var(--primary);
+}
+.link{
     padding: 20px;
 }
