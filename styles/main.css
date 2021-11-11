@@ -6,19 +6,18 @@
 /*Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 /*Press Start 2P*/
-:root {
-  --one: #216afc;
-  --two:#397afd;
-  --three:#5791fd;
-  --four:#97b8fe;
-  --five:#b5cdfe;
-  --six:#cedefe;
+:root{
+  --primary:#0B0C10;
+  --secondary:#1F2833;
+  --bgm:#C5C6C7;
+  --bga:#66FCF1;
+  --accent:#45A29E;
 }
 body{
   margin: 0px;
   padding: 0px;
-  background-color: var(--four);
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--accent);
 }
 .logo{
   cursor: pointer;
@@ -32,41 +31,43 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 5px 10%;
-  background-color: var(--three);
-  color: #ffffff;
+  background-color: var(--secondary);
+  color: var(--accent);
 }
 header ul{
   list-style: none;
 }
-header ul li{
-  display: inline-block;
-}
 .navigation{
+  display: inline-block;
   padding: 10px;
 }
 .navigation a{
-  padding: 10px 10px;
-  border-radius: 20px;
+  padding: 2vw 2vw 2vw 2vw;
+  border-radius: 25vw;
 }
 .navigation a:hover{
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: var(--primary);
+  color: var(--bga);
 }
 .content{
+  font-family: 'Courier New', Courier, monospace;
   display: inline-flex;
 }
 .content div{
   width: 50%;
   height: 50%;
 }
-.jeli{
-  background-color: #61892F;
+/*footer*/
+footer{
+  background-color: var(--secondary);
+  display: inline-flex;
 }
-#topContent div{
-  display: inline-block;
-  width: 40%;
+footer div{
+  width: 25vw;
 }
-.pageTitle{
+
+/*page style*/
+.page{
   background-color: #00AC9F;
   color:#000000;
   padding: 10px 5px;
@@ -75,16 +76,4 @@ header ul li{
 }
 .sub{
   text-align: center;
-}
-.hireme{
-  background-color: var(--one);
-}
-footer{
-  background-color: var(--three);
-}
-#foot{
-  display: inline-flex;
-}
-.foot{
-  width: 25vw;
 }
