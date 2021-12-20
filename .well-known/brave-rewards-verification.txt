@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: darwishzain.github.io
+Token: 7a7b7e488c7a6af7b6209ce35a33ae4c271e7bc0e2fbfbaf12d39d15475b2e41
