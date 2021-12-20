@@ -34,3 +34,10 @@ a:hover{
 .link{
     padding: 20px;
 }
+footer{
+    background-color: var(--primary);
+    color: var(--accent);
+}
+footer p{
+    margin: 0px;
+}
