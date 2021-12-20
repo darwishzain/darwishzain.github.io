@@ -23,13 +23,13 @@ a:hover{
 }
 .tab{
     padding: 10px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     border-radius: 25px;
     color: var(--accent);
 }
 .tab:hover{
-    background-color: var(--accent);
-    color: var(--primary);
+    background-color: var(--bga);
+    color: #000000;
 }
 .link{
     padding: 20px;
