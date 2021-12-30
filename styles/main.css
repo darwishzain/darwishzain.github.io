@@ -50,12 +50,9 @@ header ul{
   color: var(--bga);
 }
 .content{
-  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  width: 100%;
   display: inline-flex;
-}
-.content div{
-  width: 50%;
-  height: 50%;
 }
 /*footer*/
 footer{
