@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#128279; Links</title>
-    
+    <title>&#128279;</title>
     <link rel="stylesheet" href="./styles/link.css">
     <base target="_blank" href="">
 	<script src="https://kit.fontawesome.com/6d1cef488a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <a style="float: left;" href="./index.php" target="_self">
-    <i class="fa fa-home">darwishzain.com</i>
+    <i class="fa fa-home"></i>
 </a>
 <br>
-<h1>Links</h1>
+<img class="profile" src="./img/darwish-left.png" alt="" style="height: 200px;width: 200px;border-radius:50%;border:5px solid #000000;">
+<h3>Darwish Mat Zain</h3>
 <?php
     $link = mysqli_query($conn, "SELECT * FROM link");
     if(mysqli_num_rows($link)>0)

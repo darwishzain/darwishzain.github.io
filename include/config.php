@@ -1,10 +1,14 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$dbhost = "";
+$dbuser = "";
+$dbpassword = "";
+$dbname = "";
 function config()
 {
     $dbhost = "sdb-q.hosting.stackcp.net";
     $dbuser = "admin-8fc0";
-    $dbpassword = "Kev1nm1tn1ck";
+    $dbpassword = "N0m0rep@ssw0rd";
     $dbname = "darwish-3230350c48";
 }
 function config_dev()
@@ -12,14 +16,14 @@ function config_dev()
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpassword = "";
-    $dbname = "stud";
+    $dbname = "darwish";
 }
 //config();
-//config_dev();
-$dbhost = "sdb-q.hosting.stackcp.net";
-$dbuser = "admin-8fc0";
-$dbpassword = "N0m0rep@ssw0rd";
-$dbname = "darwish-3230350c48";
+config_dev();
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpassword = "";
+$dbname = "darwish";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
 
 //! variable undefined 
