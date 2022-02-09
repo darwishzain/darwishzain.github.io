@@ -1,5 +1,6 @@
+
+<h1 class="main">Contact</h1>
 <?php
-echo "<h1>Contact</h1>";
 $contact = mysqli_query($conn, "SELECT * FROM contact");
 if(mysqli_num_rows($contact)>0)
 {
@@ -7,16 +8,16 @@ if(mysqli_num_rows($contact)>0)
     {
     echo "
         <span>
-            <h2 class='main'>Real Name</h2>
-            <h3 class='sub'>".$row['contactname']."</h3><br>
-            <h2 class='main'>Address</h2>
-            <h3 class='sub'>".$row['contactaddress']."</h3><br>
-            <h2 class='main'>Work</h2>
-            <h3 class='sub'><a href='tel:".$row['contactphone']."'>".$row['contactphone']."</a></h3><br>
-            <h2 class='main'>Mobile</h2>
-            <h3 class='sub'><a href='tel:".$row['contactphome']."'>".$row['contactphome']."</a></h3><br>
-            <h2 class='main'>Email</h2>
-            <h3 class='sub'><a href='mailto:".$row['contactemail']."'>".$row['contactemail']."</a></h3><br>
+            <h2 class='sub'>Name</h2>
+            <h3 class=''>".$row['contactname']."</h3><br>
+            <h2 class='sub'>Address</h2>
+            <h3 class=''>".$row['contactaddress']."</h3><br>
+            <h2 class='sub'>Work</h2>
+            <h3 class=''><a href='tel:".$row['contactphone']."'>".$row['contactphone']."</a></h3><br>
+            <h2 class='sub'>Mobile</h2>
+            <h3 class=''><a href='tel:".$row['contactphome']."'>".$row['contactphome']."</a></h3><br>
+            <h2 class='sub'>Email</h2>
+            <h3 class=''><a href='mailto:".$row['contactemail']."'>".$row['contactemail']."</a></h3><br>
         </span>
         ";
     }

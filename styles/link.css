@@ -21,6 +21,13 @@ a{
 a:hover{
     color: var(--accent);
 }
+.profile{
+    height: 200px;
+    width: 200px;
+    border-radius:50%;
+    border:5px solid #000000;
+    background-color: #00AC9F;
+  }
 .tab{
     padding: 10px;
     background-color: var(--secondary);

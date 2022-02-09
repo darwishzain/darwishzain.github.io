@@ -1,6 +1,6 @@
-<?php
+<h1 class='main'>Projects</h1>
 
-echo "<h1 class='main'>Projects by Darwish Zain</h1>";
+<?php
 $project = mysqli_query($conn, "SELECT * FROM project");
 if(mysqli_num_rows($project)>0)
 {
@@ -8,13 +8,14 @@ if(mysqli_num_rows($project)>0)
     {
     echo "
         <span>
-            <h2 class='main'>".$row['projecttitle']."</h2>
+            <h2 class='sub'>".$row['projecttitle']."</h2>
             <span>
-                <h3 class='main'>Description:</h3>
-                <h4 class='sub'>".$row['projectdes']."</h4>
+                <h3 class='sub'>Description:</h3>
+                <h4>".$row['projectdes']."</h4>
             </span>
-            <h4><a href='".$row['projectlink']."' target='_self'>[link]</a></h4>
+            <h4><a href='".$row['projectlink']."' target='_self'><i class='fa fa-github'></i>[Github]</a></h4>
         </span>
         ";
     }
 }
+?>

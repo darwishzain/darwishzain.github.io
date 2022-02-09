@@ -1,7 +1,7 @@
 <h1 class='main'>About</h1>
 <h4 class='sub'>Who am I?</h4>
 <h5>
-    My name is Darwish Mat Zain, son
+    The name is Darwish Mat Zain, son
     of Mat Zain Mat Rifin and Hasnah Ishak.
     I am the eldest of a five siblings.
 </h5><br>

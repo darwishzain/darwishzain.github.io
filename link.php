@@ -15,7 +15,7 @@
     <i class="fa fa-home"></i>
 </a>
 <br>
-<img class="profile" src="./img/darwish-left.png" alt="" style="height: 200px;width: 200px;border-radius:50%;border:5px solid #000000;">
+<img class="profile" src="./img/darwish-left.png" alt="">
 <h3>Darwish Mat Zain</h3>
 <?php
     $link = mysqli_query($conn, "SELECT * FROM link");

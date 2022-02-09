@@ -1,37 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-/*Roboto*/
+/**Roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron');
-/*Orbitron*/
+/**Orbitron*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
-/*Montserrat*/
+/**Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-/*Press Start 2P*/
+/**Press Start 2P*/
 :root{
-  --primary:#0B0C10;
-  --secondary:#1F2833;
-  --bgm:#C5C6C7;
-  --bga:#66FCF1;
-  --accent:#45A29E;
+  --main:#0B0C10;
+  --subs:#1F2833;
+  /*--bgm:#C5C6C7;*/
+  --bg:#66FCF1;
+  --text:#45A29E;
+  --theme: #00AC9F;
 }
 *{
   margin: 0px;
   padding: 0px;
 }
 body{
-  background-color: var(--primary);
-  color: var(--accent);
+  background-color: var(--main);
+  color: var(--text);
 }
 .logo{
   cursor: pointer;
 }
 a{
   text-decoration: none;
-  color: #00AC9F;
+  color: var(--theme);
 }
 nav{
   display: flex;
   justify-content: space-between;
-  background-color: var(--secondary);
+  background-color: var(--subs);
 }
 nav ul{
   list-style: none;
@@ -48,14 +49,15 @@ nav ul li a{
   border-radius: 0px 0px 15px 15px;
 }
 .active{
-  background-color: var(--primary);
-  color: var(--bga);
+  background-color: var(--main);
+  color: var(--bg);
 }
 
 footer{
-  background-color: var(--secondary);
+  background-color: var(--subs);
   display: inline-flex;
   position: relative;
+  gap: 24px;
 }
 footer span{
   width: 25vw;
@@ -83,4 +85,27 @@ header *{
 .content{
   text-align: center;
   margin: 20px;
+}
+.profile{
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background-color: var(--theme);
+}
+.btn-header{
+  border-radius:10px;
+}
+input{
+  background-color: var(--theme);
+  color: #FFFFFF;
+  border: none;
+  margin: 5px;
+  padding: 2px;
+}
+textarea{
+  background-color: var(--theme);
+  color: #FFFFFF;
+  border: none;
+  margin: 5px;
+  padding: 2px;
 }
