@@ -1,20 +1,16 @@
 <?php
 //* Connect to database
-include_once "./include/config.php";
+include_once "./static/includes/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Darwish Mat Zain</title>
-    <?php include "./include/head.php";?>
+    <?php include "./static/includes/head.php";?>
 </head>
 <body>
     <!--header-->
-	<header><?php include "./include/header.php";?></header>
-    <nav><?php include "./include/nav.php";?></nav>
+	<?php include "./static/includes/header.php";?>
+    <?php include "./static/includes/nav.php";?>
     <!--content-->
     <span class="content">
         <?php
@@ -31,8 +27,6 @@ include_once "./include/config.php";
         ?>
     </span>
     <!--footer-->
-	<footer><?php include "./include/footer.php";?></footer>
-
-	<?php include "./include/copy.php";?>
+	<?php include "./static/includes/footer.php";?>
 </body>
 </html>

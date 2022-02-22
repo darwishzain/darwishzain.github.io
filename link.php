@@ -1,4 +1,4 @@
-<?php include_once "./include/config.php";?>
+<?php include_once "./static/includes/config.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#128279;</title>
-    <link rel="stylesheet" href="./styles/link.css">
+    <link rel="stylesheet" href="./static/styles/link.css">
     <base target="_blank" href="">
 	<script src="https://kit.fontawesome.com/6d1cef488a.js" crossorigin="anonymous"></script>
 </head>
@@ -15,7 +15,7 @@
     <i class="fa fa-home"></i>
 </a>
 <br>
-<img class="profile" src="./img/darwish-left.png" alt="">
+<img class="profile" src="./static/image/darwish-left.png" alt="">
 <h3>Darwish Mat Zain</h3>
 <?php
     $link = mysqli_query($conn, "SELECT * FROM link");
@@ -49,18 +49,18 @@
 </div>
 
 <div>
-    <a href="https://click.accesstra.de/adv.php?rk=004n8v000rs9" target="_blank"><img src="https://imp.accesstra.de/img.php?rk=004n8v000rs9" border="0"/></a>
+    <a href="https://click.accesstra.de/adv.php?rk=004n8v000rs9" target="_blank"><img src="https://imp.accesstra.de/static/image.php?rk=004n8v000rs9" border="0"/></a>
     <br>
-    <a href="https://click.accesstra.de/adv.php?rk=004hf1000rs9" target="_blank"><img src="https://imp.accesstra.de/img.php?rk=004hf1000rs9" border="0"/></a>
+    <a href="https://click.accesstra.de/adv.php?rk=004hf1000rs9" target="_blank"><img src="https://imp.accesstra.de/static/image.php?rk=004hf1000rs9" border="0"/></a>
     <br>
-    <a href="https://click.accesstra.de/adv.php?rk=004tx6000rs9" target="_blank"><img src="https://imp.accesstra.de/img.php?rk=004tx6000rs9" border="0"/></a>
+    <a href="https://click.accesstra.de/adv.php?rk=004tx6000rs9" target="_blank"><img src="https://imp.accesstra.de/static/image.php?rk=004tx6000rs9" border="0"/></a>
     <br>
-    <a href="https://click.accesstra.de/adv.php?rk=001in5000rs9" target="_blank"><img src="https://imp.accesstra.de/img.php?rk=001in5000rs9" border="0"/></a>
+    <a href="https://click.accesstra.de/adv.php?rk=001in5000rs9" target="_blank"><img src="https://imp.accesstra.de/static/image.php?rk=001in5000rs9" border="0"/></a>
     <br>
-    <a href="https://click.accesstra.de/adv.php?rk=005eip000rs9" target="_blank"><img src="https://imp.accesstra.de/img.php?rk=005eip000rs9" border="0"/></a>
+    <a href="https://click.accesstra.de/adv.php?rk=005eip000rs9" target="_blank"><img src="https://imp.accesstra.de/static/image.php?rk=005eip000rs9" border="0"/></a>
 </div>
 <footer>
-    <?php include "./include/copy.php";?>
+    <?php include "./static/includes/copy.php";?>
 </footer>
 </body>
 <!--onerror="this.onerror=null; this.src='Default.jpg'"-->
