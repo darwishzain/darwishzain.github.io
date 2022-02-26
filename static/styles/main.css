@@ -107,3 +107,21 @@ textarea{
   margin: 5px;
   padding: 2px;
 }
+.project{
+  background: #000;
+  width:50%; text-align:center;margin:auto;
+}
+.project-right{
+  border-top: #00AC9F 3px solid;
+  border-right: #A0A0A0 5px dashed;
+  border-bottom: #00AC9F 3px solid;
+  border-left: #00AC9F 3px solid;
+  width:30%;
+}
+.project-left{
+  border-top: #00AC9F 3px solid;
+  border-right: #00AC9F 3px solid;
+  border-bottom: #00AC9F 3px solid;
+  border-left: none;
+  width:20%;
+}

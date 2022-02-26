@@ -1,5 +1,5 @@
 
-<h1 class="main">Contact</h1>
+<h1 >Contact</h1>
 <?php
 $contact = mysqli_query($conn, "SELECT * FROM contact");
 if(mysqli_num_rows($contact)>0)
