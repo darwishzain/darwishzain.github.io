@@ -11,7 +11,7 @@ if(mysqli_num_rows($project)>0)
     <tr>
         <td class="project-right">
             <h2><?php echo $row['projecttitle'];?></h2>
-            <h2 style="color:#A0A0A0;"><?php echo $row['projectdes'];?></h2>
+            <h3 style="color:#A0A0A0;"><?php echo $row['projectdes'];?></h3>
         </td>
         <td class="project-left">
             <h3>
