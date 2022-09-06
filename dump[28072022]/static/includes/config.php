@@ -23,7 +23,7 @@ config_dev();
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpassword = "";
-$dbname = "darwish";
+$dbname = "jelimy-3139374d2f";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname);
 
 //! variable undefined 

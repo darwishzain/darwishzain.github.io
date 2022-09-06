@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/**Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron');
+/**Orbitron*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+/**Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/**Press Start 2P*/
+:root{
+  --main:#0B0C10;
+  --subs:#1F2833;
+  /*--bgm:#C5C6C7;*/
+  --bg:#66FCF1;
+  --text:#45A29E;
+  --theme: #00AC9F;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: var(--main);
+  color: var(--text);
+}
+h1,h2,h3,h4,h5,h6{
+  color: #FFFFFF;
+}
+.logo{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: var(--theme);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--subs);
+}
+nav ul{
+  list-style: none;
+}
+
+nav ul li{
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+}
+nav ul li a{
+  padding: 20px;
+  border-radius: 0px 0px 15px 15px;
+}
+.active{
+  background-color: var(--main);
+  color: var(--bg);
+}
+
+footer{
+  width: 100%;
+  background-color: var(--subs);
+  display: inline-flex;
+  position: relative;
+  gap: 24px;
+}
+footer span{
+  width: 25%;
+}
+
+header{
+  margin: 20px 5px 20px 5px;
+}
+header *{
+  border: 1px solid #000000;
+  padding: 10px 5px 10px 5px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.jeli{
+  background-color: #5CDB95;
+  color: #000000;
+}
+.content{
+  text-align: center;
+  margin: 20px;
+}
+.profile{
+  height: 100px;
+  width: 100px;
+  border-radius:50%;
+  background-color: var(--theme);
+}
+.btn-header{
+  border-radius:10px;
+}
+input{
+  background-color: var(--theme);
+  color: #FFFFFF;
+  border: none;
+  margin: 5px;
+  padding: 2px;
+}
+textarea{
+  background-color: var(--theme);
+  color: #FFFFFF;
+  border: none;
+  margin: 5px;
+  padding: 2px;
+}
+.project{
+  background: #000;
+  width:50%; text-align:center;margin:auto;
+}
+.project-right{
+  border-top: #00AC9F 3px solid;
+  border-right: #A0A0A0 5px dashed;
+  border-bottom: #00AC9F 3px solid;
+  border-left: #00AC9F 3px solid;
+  width:30%;
+}
+.project-left{
+  border-top: #00AC9F 3px solid;
+  border-right: #00AC9F 3px solid;
+  border-bottom: #00AC9F 3px solid;
+  border-left: none;
+  width:20%;
+}
