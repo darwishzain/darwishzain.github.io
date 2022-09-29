@@ -9,8 +9,8 @@
 :root{
   --main:#0B0C10;
   --subs:#1F2833;
-  /*--bgm:#C5C6C7;*/
-  --bg:#66FCF1;
+  /*-m:#C5C6C7;*/
+  -:#66FCF1;
   --text:#45A29E;
   --theme: #00AC9F;
 }
@@ -53,7 +53,7 @@ nav ul li a{
 }
 .active{
   background-color: var(--main);
-  color: var(--bg);
+  color: var(-);
 }
 
 footer{

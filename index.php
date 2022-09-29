@@ -8,58 +8,253 @@
     <link rel='icon' href='images/logo.png'>
     <title>Darwish Zain</title>
     <link rel="stylesheet" href="static/styles/main.css?ver=<?php echo rand(111,9999);?>">
-
 </head>
-<body>
-<div id="container">
-    <div id="content">
-        <?php include "static/includes/nav.php";?>
-
+<body class="bg-black">
+<div>
+    <?php include "static/includes/nav.php";?>
+    <br>
+    <div class="h100 w80 ma br25 bg-white-smoke">
         <?php
         if(isset($_GET['project']))
         {
-            include 'project.php';
+            if($_GET['project'] == 0)
+            {
+                ?>
+                <table class="w80 ma">
+                    <tr><td><h2 class=""><a href="index.php">Back</a></h2></td></tr>
+                    <tr><td><h2 class="link">Project</h2></td></tr>
+                    <?php
+                    $q = mysqli_query($conn,"SELECT * FROM project WHERE isShow = 1");
+                    if(mysqli_num_rows($q)>0)
+                    {
+                        while($q_a = mysqli_fetch_assoc($q))
+                        {
+                            ?>
+                            <tr>
+                                <td>
+                                <a href="index.php?project=<?php echo $q_a['id'];?>">
+                                    <h3 class="link bg-celtic-blue fg-white-smoke"><?php echo $q_a['pro_title'];?></h3>
+                                </a>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
+                </table>
+                <?php
+
+            }
+            else
+            {
+                $q = mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM project WHERE id = '".$_GET['project']."' AND isShow =1 limit 1"));
+                if(!$q)
+                {
+                    ?><script>alert('Project Not Exist')</script><?php
+                    header('location:index.php?project=0');
+                }
+                $start = explode('-',$q['pro_start'])[0];
+                $end = explode('-',$q['pro_end'])[0];
+                if($end >  date("Y"))
+                {
+                    $end = "Now";
+                }
+                ?>
+                <div>
+                <h2 class="link"><?php echo $q['pro_title'];?></h2>
+                    <h3>(<?php echo $start." - ".$end;?>)</h3>
+                    <h3>
+                        <?php echo $q['pro_desc'];?><br>
+                    </h3>
+                    <a target="_blank" href="<?php echo $q['pro_link'];?>">
+                        Visit
+                    </a>
+                </div>
+                <?php
+            }
         }
         else if(isset($_GET['gallery']))
         {
-            include 'gallery.php';
+            $gallery = $_GET['gallery'];
+            if($gallery == 0)
+            {
+                //:] List all album
+                $q = mysqli_query($conn,"SELECT * FROM album");
+                ?>
+                <h2 class="link">Gallery</h2>
+                <?php
+                if(mysqli_num_rows($q)>0)
+                {
+                    while($q_a = mysqli_fetch_assoc($q))
+                    {
+                        ?>
+                        <h3 class="link bg-celtic-blue">
+                            <a href="index.php?gallery=<?php echo $q_a['id']?>"><?php echo $q_a['name'];?></a>
+                        </h3>
+                        <?php
+                    }
+                }
+            }
+            else if($gallery == 'album')
+            {
+                //:] Add new album
+                ?>
+                <form name="" action="" method="post" style="text-align:center">
+                    <h2 class="link">New Album</h2>
+                    <input class="" type="text" name="album_name" placeholder="Name"> <br>
+                    Date <input type="date" name="album_date" id="" value="<?php echo date('Y-m-d');?>"><br>
+                    <input type="text" name="album_tag" placeholder="Tag"> <br>
+                    <input type="text" name="album_by" placeholder="By"> <br>
+                    <input type="submit" name="new" value="Add"><br>
+                </form>
+                <?php
+                if(!empty(isset($_POST['new'])))
+                {
+                    $albumname = $_POST['album_name'];
+                    $albumdate = $_POST['album_date'];
+                    $albumtag = $_POST['album_tag'];
+                    $albumby = $_POST['album_by'];
+
+                    $query = "INSERT INTO album (name, date, tag, byline) VALUES ('$albumname', '$albumdate','$albumtag', '$albumby')";
+                    $result = mysqli_query($conn, $query);
+                    if($result)
+                    {
+                        echo "success";
+                    }
+                }
+            }
+            else if($gallery == 'gallery')
+            {
+                //:] Add new gallery
+                $q = mysqli_query($conn,"SELECT id,name FROM album");
+                if(mysqli_num_rows($q)>0)
+                {
+                    while($q_a = mysqli_fetch_assoc($q))
+                    {
+                        ?>
+                        
+                        <h3 class="link bg-celtic-blue">
+                            <a href="index.php?gallery=<?php echo $q_a['id']?>"><?php echo $q_a['name'];?></a>
+                        </h3>
+                        <?php
+                    }
+                }
+            }
+            else
+            {
+                $q = mysqli_query($conn,"SELECT * FROM gallery WHERE album_id = '$gallery'");
+                $r_a = mysqli_fetch_assoc(mysqli_query($conn,"SELECT * FROM album WHERE id = '$gallery'"));
+                ?>
+                <h2 class="link"><?php echo $r_a['name'];?></h2>
+                <h3 class="link">by: <?php echo $r_a['byline'];?> (<?php echo $r_a['date'];?>)</h3>
+                <?php
+                if(mysqli_num_rows($q)>0)
+                {
+                    while($q_a = mysqli_fetch_assoc($q))
+                    {
+                        ?>
+                        <img class="g_image" src="images/gallery/<?php echo $gallery;?>/<?php echo $q_a['name'];?>" alt="">
+                        <?php
+                    }
+                }
+            }
         }
         else if(isset($_GET['home']))
         {
-            include 'home.php';
+            $home = array("s"=>"Software","w"=>"Website","a"=>"Affiliate","m"=>"Social Media","g"=>"Gadget","i"=>"Advertisement");
+            if($_GET['home']==0)
+            {
+                ?>
+                <table class="w80 ma">
+                    <tr><td><h2 class=""><a href="index.php">Back</a></h2></td></tr>
+                    <tr><td><h2 class="link">Home</h2></td></tr>
+                <?php
+                    foreach ($home as $link => $text) {
+                    ?>
+                    <tr>
+                        <td>
+                            <a href="index.php?home=<?php echo $link?>&title=<?php echo $link?>">
+                            <h3 class="link bg-celtic-blue fg-white-smoke"><?php echo $text?></h3>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
+                <?php
+            }
+            else
+            {
+                ?>
+                <table class="w80 ma">
+                    <tr><td><h2 class=""><a href="index.php?home=0">Back</a></h2></td></tr>
+                    <tr><td><h2 class="link"><?php echo $home[$_GET['title']];?></h2></td></tr>
+                    <?php
+                    $q = mysqli_query($conn,"SELECT * FROM link WHERE tag LIKE '".$_GET['home']."'");
+
+                    if(mysqli_num_rows($q)>0)
+                    {
+                        while($q_a = mysqli_fetch_assoc($q))
+                        {
+                            ?>
+                            <tr>
+                                <td>
+                                    <a target="_blank" href="<?php echo $q_a['link'];?>">
+                                        <h3 class="link bg-persian-green fg-white-smoke"><?php echo $q_a['name'];?></h3>
+                                    </a>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    }
+                    ?>
+                </table>
+                <?php
+            }
         }
         else
         {
             ?>
-            <h1 class="link cadmium-red-bg">Under Development</h1>
-            <div class="">
-                <div class="">
-                    Photography
-                    <br>
-                    Web Development
-                </div>
-                <div class="">
-                    <img id="main-image" src="images/darwish.png" alt="" srcset="">
-                </div>
-                <div class="twentyfive">
-                    Software Development
-                    <br>
-                    Digital Design
-                </div>
-            </div>
-            <!--
-                <a href="https://click.accesstra.de/adv.php?rk=007mv3000rs9&url=https%3A%2F%2Fshopee.com.my%2Fgadgetnations%3Futm_source%3Dan_12105460000%26utm_medium%3Daffiliates%26utm_campaign%3D-%26utm_content%3D%7Bpsn%7D-%7Bclickid%7D-%7Bpublisher_site_url%7D-%7Bcampaign%7D-%26af_siteid%3Dan_12105460000%26pid%3Daffiliates%26af_click_lookback%3D7d%26is_retargeting%3Dtrue%26af_reengagement_window%3D7d%26af_sub_siteid%3D%7Bpsn%7D-%7Bclickid%7D-%7Bpublisher_site_url%7D-%7Bcampaign%7D-%26c%3D-%26deep_and_deferred%3D1" target="_blank">
-                    <img src="https://cf.shopee.com.my/file/e934cf617868ce659008992d0a3e80c0_tn" alt="Gadgetnation on Shopee" border="0"/><img src="https://imp.accesstra.de/img.php?rk=007mv3000rs9"width="1"height="1"border="0"alt=""/>
-                </a>
-            -->
+            <table class="w100 center ma br25 bg-white-smoke">
+                <tr><td colspan="2"><h1 class="w100 center">Expertise</h1></td></tr>
+                <?php
+                $expertise = array("Photography","Software Development","Game Development","Web Developement","Digital Design", "Digital Art");
+                for ($i=0; $i < count($expertise); $i++)
+                {
+                    ?>
+                    <tr>
+                        <td class="w50"><img class="w50" src="images/home/<?php echo $i?>.jpg" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td class="w50"><h3 class="w100"><?php echo $expertise[$i];?></h3></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </table>
+            <br>
+            <table class="w100 center ma br25 bg-white-smoke">
+                <tr><td><h1 class="w100 center">Programming Language</h1></td></tr>
+                <?php
+                $programming = array("Python", "C,C++,C#");
+                foreach ($programming as $p) {
+                    ?>
+                    <tr>
+                        <td class="w20">
+                            <h3 class=""><?php echo $p;?></h3>
+                        </td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </table>
             <?php
         }
         ?>
     </div>
-    <footer>
-        Copyright &copy; 2018-<script>document.write(new Date().getFullYear())</script>
-        <a target="_blank" href="https://darwishzain.com">Darwish Zain Studio</a>
-    </footer>
+    <br>
+    <?php //include 'static/includes/footer.php'?>
 </div>
 </body>
 </html>
