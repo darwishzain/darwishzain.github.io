@@ -4,9 +4,13 @@ body{
     padding:0px;
 }
 .bg-golden-poppy{background-color: #F3C300;}
+.fg-golden-poppy{color: #F3C300;}
 .bg-cadmium-red{background-color: #DF0024;}
+.fg-cadmium-red{color: #DF0024;}
 .bg-persian-green{background-color: #00AC9F;}
+.fg-persian-green{color: #00AC9F;}
 .bg-celtic-blue{background-color: #2E6DB4;}
+.fg-celtic-blue{color: #2E6DB4;}
 .bg-white-smoke{background-color: #F0F0F0;}
 .fg-white-smoke{color: #F0F0F0;}
 .bg-grey{background-color: #AAAAAA;}

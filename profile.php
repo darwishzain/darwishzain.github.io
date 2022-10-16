@@ -30,6 +30,16 @@ function login($conn)
     }
 }
 
+function logout()
+{
+    session_start();
+    if(isset($_SESSION['user_id']))
+    {
+        unset($_SESSION['user_id']);
+    }
+    ?><script></script><?php
+    header("location:index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,8 +76,12 @@ function login($conn)
             echo 'Website not open for signup yet';
         }
 
-        if(isset($_POST['login'])){login($conn);}else if(isset($_POST['signup'])){signup();}
-        ?>
+
+        if(isset($_POST['login'])){login($conn);}
+        else if(isset($_POST['signup'])){signup();}
+
+        if(isset($_GET['logout'])){logout();}
+?>
     </div>
 </body>
 </html>
