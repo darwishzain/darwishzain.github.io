@@ -68,7 +68,7 @@ if(isset($_SESSION['user_id']))
                                 if(!empty($q['visit']))
                                 {
                                     ?>
-                                    <a target="_blank" class="fg-celtic-blue" href="<?php echo $q['link'];?>">Visit</a>
+                                    <a target="_blank" class="fg-celtic-blue bg-black" href="<?php echo $q['visit'];?>">Visit</a>
                                     <?php
                                 }
                                 if(!empty($q['code']))
