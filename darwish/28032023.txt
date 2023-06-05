@@ -1,0 +1,261 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: sdb-53.hosting.stackcp.net
+-- Generation Time: Mar 28, 2023 at 08:41 AM
+-- Server version: 10.4.26-MariaDB-log
+-- PHP Version: 7.1.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `darwishzain-3530303536e8`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `album`
+--
+
+CREATE TABLE `album` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `byline` varchar(255) NOT NULL,
+  `isShow` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `album`
+--
+
+INSERT INTO `album` (`id`, `name`, `date`, `byline`, `isShow`) VALUES
+(1, 'Sukan Pasti 2022', '2022-10-04', 'Darwish', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `album_id` int(11) NOT NULL,
+  `isShow` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home`
+--
+
+CREATE TABLE `home` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `tag` varchar(255) NOT NULL,
+  `isShow` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `home`
+--
+
+INSERT INTO `home` (`id`, `name`, `file`, `tag`, `isShow`) VALUES
+(1, 'Photographer \"Say Cheese!\",', 'photography.png', 'p', 1),
+(3, 'Programmer \"It\'s not a bug, It\'s a feature\",', 'programming.png', 'p', 1),
+(4, 'Graphic Designer \"All I do is click here and there\"', 'design.png', 'p', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `link`
+--
+
+CREATE TABLE `link` (
+  `id` int(100) NOT NULL,
+  `name` tinytext DEFAULT NULL,
+  `link` tinytext DEFAULT NULL,
+  `tag` varchar(10) DEFAULT NULL,
+  `tagname` varchar(255) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `link`
+--
+
+INSERT INTO `link` (`id`, `name`, `link`, `tag`, `tagname`, `date`) VALUES
+(1, 'UMP-link', 'https://sourceforge.net/projects/ump-link/', 'p', 'Programming', '2022-11-01'),
+(2, 'Recluse Board', 'https://sourceforge.net/projects/recluseboard/', 'p', 'Programming', '2022-11-01'),
+(3, 'Jeli.my Website', 'https://jeli.com.my', 'p', 'Programming', '2022-11-01'),
+(4, 'Darwish Zain Website', 'https://darwishzain.jeli.com.my', 'p', 'Programming', '2022-11-01'),
+(15, 'Album PASTI', 'https://drive.google.com/drive/folders/1jxftphAdYZzgBP0FJN0qlZuYQjotoN0Q?usp=share_link', 'b', 'Album', '2022-12-22'),
+(16, 'Album Peka5', 'https://drive.google.com/drive/folders/1sKOUQchgud0G9Lvb9Sr-iGNTZZMYa45y?usp=share_link', 'b', 'Album', '2022-12-22'),
+(31, 'Accesstrade Affiliate', 'https://pub.accesstrade.global/#/sign-up?country=my&referral_id=peCEX2qcRRCcSpw5RbapzA%3D%3D', 'a', 'Affiliate', '2022-11-01'),
+(32, 'Canva Affiliate', 'https://accesstra.de/004n3n000rs9', 'a', 'Affiliate', '2022-11-01'),
+(33, 'Shezawebhost Affiliate', 'https://shezawebhost.com/cms/aff.php?aff=11', 'a', 'Affiliate', '2022-11-01'),
+(34, 'Luno Affiliate', 'https://www.luno.com/invite/AE8932', 'a', 'Affiliate', '2022-11-01'),
+(35, 'Tubebuddy Affiliate', 'https://www.tubebuddy.com/darwishzain', 'a', 'Affiliate', '2022-11-01'),
+(36, 'Watsons Affiliate', 'https://accesstra.de/000toz000rs9', 'a', 'Affiliate', '2022-11-01'),
+(37, 'Zalora Affiliate', 'https://accesstra.de/000ltn000rs9', 'a', 'Affiliate', '2022-11-01'),
+(38, 'Teapluz Affiliate', 'https://accesstra.de/0050cp000rs9', 'a', 'Affiliate', '2022-11-01'),
+(39, 'Lazada Affiliate', 'https://accesstra.de/000lmx000rs9', 'a', 'Affiliate', '2022-11-01'),
+(40, 'Kinokuniya Affiliate', 'https://accesstra.de/000oyn000rs9', 'a', 'Affiliate', '2022-11-01'),
+(41, 'Restream.io Affiliate', 'https://restream.io/join/AD25P7', 'a', 'Affiliate', '2022-11-01'),
+(42, 'Tenda 4G180 on Shopee', 'https://click.accesstra.de/go/40QzLZmI', 'a', 'Affiliate', '2022-10-02'),
+(43, '25 Madu Stick', 'https://wa.me/p/5586866554710640/601137535178', 'c', 'Catalog', '2022-12-22'),
+(44, '50 Madu Stick', 'https://wa.me/p/4969462179849138/601137535178', 'c', 'Catalog', '2022-12-22'),
+(45, '100 Madu Stick', 'https://wa.me/p/5229239080497422/601137535178', 'c', 'Catalog', '2022-12-22'),
+(46, '200 Madu Stick', 'https://wa.me/p/5743564682396491/601137535178', 'c', 'Catalog', '2022-12-22'),
+(47, '350g Honey Lime', 'https://wa.me/p/6000776179939659/601137535178', 'c', 'Catalog', '2022-12-22'),
+(48, '720g Honey Lime', 'https://wa.me/p/5920118978045921/601137535178', 'c', 'Catalog', '2022-12-22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `project`
+--
+
+CREATE TABLE `project` (
+  `id` int(100) NOT NULL,
+  `name` tinytext DEFAULT NULL,
+  `desc` mediumtext DEFAULT NULL,
+  `visit` tinytext DEFAULT NULL,
+  `code` text NOT NULL,
+  `download` text NOT NULL,
+  `start` date DEFAULT NULL,
+  `end` date DEFAULT NULL,
+  `isShow` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `project`
+--
+
+INSERT INTO `project` (`id`, `name`, `desc`, `visit`, `code`, `download`, `start`, `end`, `isShow`) VALUES
+(1, 'Jeli.my Website', 'The main focus of the project is to develop a centralized website that will provide information related to Jeli state of Kelantan. The aim of the project is to give more exposure on what is happening in Jeli. It is possible that the success in this project will inspire tourism activity, economy growth and development for Jeli. ', 'https://jeli.com.my', '', '', '2018-01-01', '2023-07-13', 1),
+(2, 'UMP Link', 'The application provides a fast access to UMP\'s website for students and lecturers. You can open said website just by a click of a button. Future feature will be initiate other application by a click of a button.\r\n<br>\r\n<a href=\"https://www.producthunt.com/posts/ump-link?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ump&#0045;link\" target=\"_blank\"><img src=\"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=346241&theme=light\" alt=\"UMP&#0045;Link - University&#0032;of&#0032;Malaysia&#0032;Pahang&#0039;s&#0032;&#0040;UMP&#0041;&#0032;website&#0032;in&#0032;a&#0032;FLASH | Product Hunt\" style=\"width: 250px; height: 54px;\" width=\"250\" height=\"54\" /></a> \r\n<a href=\"https://sourceforge.net/projects/ump-link/files/latest/download\"><img alt=\"Download ump-link\" src=\"https://a.fsdn.com/con/app/sf-download-button\" width=276 height=48 srcset=\"https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x\"></a>', 'https://sourceforge.net/projects/ump-link/', 'https://github.com/darwishzain/ump-link', 'https://sourceforge.net/projects/ump-link/files/latest/download', '2018-01-01', '2022-03-12', 1),
+(7, 'Recluse Board', 'This project is a continuation of UMP-link project where it is given a wider perspective that focus on university students. Recluse Board aims to provide a dashboard for students where they can access multiple actions easily for better productivity.\r\n<br>\r\n<a href=\"https://www.producthunt.com/posts/recluse-board?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-recluse&#0045;board\" target=\"_blank\"><img src=\"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=380178&theme=light\" alt=\"Recluse&#0032;Board - Multi&#0032;purpose&#0032;productivity&#0032;software | Product Hunt\" style=\"width: 250px; height: 54px;\" width=\"250\" height=\"54\" /></a>\r\n<a href=\"https://sourceforge.net/projects/recluseboard/files/latest/download\"><img alt=\"Download Recluse Board\" src=\"https://a.fsdn.com/con/app/sf-download-button\" width=276 height=48 srcset=\"https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x\"></a>', 'https://sourceforge.net/projects/recluse-board/', 'https://github.com/darwishzain/recluse-board', 'https://sourceforge.net/projects/recluse-board/files/latest/download', '2022-05-10', '2022-08-31', 1),
+(81, 'Inventory System', 'Project for Software Development Workshop Subject.\r\nThis project was developed for Software Development Workshop (SDW) of the university. The project revolve around certain faculty\'s administration office', '', 'https://github.com/start-up-tech/FKIS-Project', '', '2018-01-01', '2021-06-16', 1),
+(82, 'UMP FYP', 'Project for Web Engineering Subject (BCS2243)\r\nThe project was developed for one of the subject in the university. The project aspire to assist students, lecturer and industry personnel to undergo final year project processes for the university', '', 'https://github.com/web-1A4-2021/ump-fyp', '', '2018-01-01', '2022-01-28', 1),
+(83, 'PSM Evaluation System', 'Project for Software Engineering Practice Subject (BCS3133)\r\nThe project aim to aid Final Year Project Evaluation for FYP Student', '', 'https://github.com/safwan-co/PSM-EVALUATION-SYSTEMS', '', '2022-05-10', '2022-06-07', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL DEFAULT 'jelata'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `password`, `type`) VALUES
+(1, 'darwishzain', '123456', 'syahbandar');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `album`
+--
+ALTER TABLE `album`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `album_id` (`album_id`);
+
+--
+-- Indexes for table `home`
+--
+ALTER TABLE `home`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `link`
+--
+ALTER TABLE `link`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `project`
+--
+ALTER TABLE `project`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `album`
+--
+ALTER TABLE `album`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `home`
+--
+ALTER TABLE `home`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `link`
+--
+ALTER TABLE `link`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+
+--
+-- AUTO_INCREMENT for table `project`
+--
+ALTER TABLE `project`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`album_id`) REFERENCES `album` (`id`);
+COMMIT;

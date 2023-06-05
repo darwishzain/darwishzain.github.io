@@ -11,7 +11,7 @@ $dbpwd = "th3yn33dyourightnowbutwh3nth3ydontth3yllcastyououtlik3al3p3r";
 $dbname = "darwishzain-3530303536e8";
 $conn = mysqli_connect($dbhost,$dbuser,$dbpwd,$dbname);
 if ($conn) {
-    echo "<script>console.log('Connected')</script>";
+    ?><script>console.log('Connected')</script><?php
 }
 else
 {
