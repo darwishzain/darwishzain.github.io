@@ -1,0 +1,137 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 1rem;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    padding: 2rem;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* About Me Section */
+section {
+    padding: 2rem;
+}
+.sectiondark{
+  background-color: #e2e2e2;
+}
+.sectionlight{
+  background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #e2e2e2;
+}
+
+/* Projects Section */
+.project-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.project {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#social-media {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+#social-media h2 {
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
