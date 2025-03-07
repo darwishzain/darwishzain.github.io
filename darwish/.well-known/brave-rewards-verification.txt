@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: darwishzain.com
-Token: 3b06dc6aeb8f356315c803defa72a89b07fefd386b6f73527abed8bcccf81bd1
