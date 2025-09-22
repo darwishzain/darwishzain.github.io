@@ -3,31 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/profile.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Game Atlas</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Game Atlas @ MOBA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html?query=Honor of Kings">Honor of Kings</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="gamecontent">
+
+    </div>
     <div id="honorofkings"></div>
     <script>
-        eql = "";
-        equipments = [];
-        fetch('./data/honorofkings_bkp.json')
+        let gamedata = {};
+        let gamejson = '';
+        gamecontent = document.getElementById('gamecontent');
+        gamecontent.innerHTML = '';
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('query');
+        if(query == 'Honor of Kings') {
+            gamejson = './data/honorofkings_bkp.json';
+        }
+        else {
+            document.getElementById('gamecontent').innerHTML = '<p class="text-danger">Please select a game.</p>';
+        }
+        fetch(gamejson)
             .then(response => response.json())  // Parse JSON
-            .then(hok => {
-            // Display the data
-            hok.equipments.forEach(e=> {
-                equipments.push(e.name+'<br>');
-            });
-            hok.equipments.forEach(eq=> {
-                eql += `<p>Equipment: ${eq.name}, Type: ${eq.type}, Price: ${eq.cost}</p>`;
-            });
-            document.getElementById('honorofkings').innerHTML = `
-                <p>Honor of Kings (王者荣耀)</p>
-                <p><strong>Name:</strong> ${hok.title}</p>
-                <p><strong>Description:</strong> ${hok.description}</p>
-                <div>
-                    ${equipments}
-                </div>
-            `;
+            .then(data => {
+                gamedata = data;
+                document.title = gamedata['title'];
+                gamecontent.innerHTML += `<h1 class="text-center">${gamedata['title']}</h1>`;
+                gamecontent.innerHTML += `<p class="text-center text-secondary">${gamedata['description']}</p>`;
+                gamecontent.innerHTML += `<p class="text-center text-secondary">Last Updated: ${gamedata['updated']}</p>`;
+                if(gamedata['equipments'])
+                {
+                    let equipmentHTML = `<table class="table table-hover table-bordered" style="width:90%;margin:auto;">`;
+                    equipmentHTML += `<tr>`;
+                    equipmentHTML += `<th scope="col">Name</th>`;
+                    equipmentHTML += `<th scope="col">Cost</th>`;
+                    if(gamedata['attributes'])
+                    {
+                        attr = [];
+                        gamedata['attributes'].forEach(a =>
+                        {
+                            attr.push(a.replace(/\([^)]*\)/g, "").trim());
+                            
+                            equipmentHTML += `<th class="text-center" scope="col">${a.replace(/\(\s*\)/g, "")}</th>`;
+                        });
+                    }
+                    equipmentHTML += `</tr>`;
+                    gamedata['equipments'].forEach(equipments=>
+                    {
+                        tabledata = [];
+                        equipmentHTML += `<tr>`;
+                        equipmentHTML += `<td scope="row">${equipments['name']}</td>`;
+                        equipmentHTML += `<td>${String(equipments['cost'])}</td>`;
+                        attr.forEach(item=>{
+                            equipmentHTML += `<td style="text-align:center";>${equipments['attributes'][item]|| " "}</td>`;
+                        });
+                        //equipmentHTML += `<td>${equipments['attributes']['physical attack']}</td>`;
+                        equipmentHTML += `</tr>`;
+                    }
+                    );
+                    equipmentHTML += `</table>`;
+                    gamecontent.innerHTML += equipmentHTML;
+
+                }
             })
             .catch(error => console.error('Error loading JSON:', error));
     </script>
