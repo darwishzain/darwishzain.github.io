@@ -1,0 +1,1074 @@
+{
+    "title": "Honor of Kings Equipment",
+    "description": "A comprehensive list of equipment used in the game Honor of Kings.",
+    "credits": "Informations from Honor of Kings by Tencent Games.",
+    "created": "06-09-2025",
+    "updated": "06-09-2025",
+    "types": [
+        "Physical",
+        "Magical",
+        "Defense",
+        "Movement",
+        "Jungling",
+        "Roaming"
+    ],
+    "attributes": [
+        "physical attack ()",
+        "magical attack ()",
+        "physical lifesteal (%)",
+        "max health ()",
+        "max mana ()",
+        "health regen (/5s)",
+        "mana regen (/5s)",
+        "physical defense ()",
+        "magical defense ()",
+        "attack speed (%)",
+        "movement speed (%)",
+        "critical rate (%)",
+        "cooldown reduction (%)"
+    ],
+    "equipments": [
+        {
+            "name": "Iron Sword",
+            "type": "Physical",
+            "attributes": {
+                "physical attack": "60"
+            },
+            "cost": 300
+        },
+        {
+            "name": "Dagger",
+            "type": "Physical",
+            "attributes": {
+                "attack speed": "10"
+            },
+            "cost": 290
+        },
+        {
+            "name": "Pugilist's Gauntlet",
+            "type": "Physical",
+            "cost": 320,
+            "attributes": {
+                "critical rate": 8
+            }
+        },
+        {
+            "name": "Vampiric Scythe",
+            "type": "Physical",
+            "cost": 290,
+            "attributes": {
+                "physical lifesteal": 8
+            }
+        },
+        {
+            "name": "Lance of Swiftness",
+            "type": "Physical",
+            "cost": 375,
+            "attributes": {
+                "physical attack": 10,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Thunderclap Brand",
+            "type": "Physical",
+            "cost": 450,
+            "attributes": {
+                "physical attack": 40
+            }
+        },
+        {
+            "name": "Raging Claw",
+            "type": "Physical",
+            "cost": 550,
+            "attributes": {
+                "critical rate": 15
+            }
+        },
+        {
+            "name": "Storm Sword",
+            "cost": 850,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 75
+            }
+        },
+        {
+            "name": "Sunglow Striker",
+            "cost": 710,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 25,
+                "max health": 400,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Twinblades of Destruction",
+            "cost": 890,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 15,
+                "movement speed": 5,
+                "critical rate": 10
+            }
+        },
+        {
+            "name": "Meteor",
+            "cost": 930,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 55
+            }
+        },
+        {
+            "name": "Swiftstrike Lance",
+            "cost": 880,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 20
+            }
+        },
+        {
+            "name": "Bloodsoul",
+            "cost": 830,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 30,
+                "physical lifesteal": 10
+            }
+        },
+        {
+            "name": "Cloudpiercer",
+            "cost": 1100,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 40,
+                "attack speed": 10
+            }
+        },
+        {
+            "name": "Destiny",
+            "cost": 1900,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 60,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Starbreaker",
+            "cost": 2100,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 80,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Demonsbane",
+            "cost": 2090,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 90,
+                "max health": 500,
+                "magical defense": 100
+            }
+        },
+        {
+            "name": "Deepfrost Siege",
+            "cost": 2050,
+            "type": "Physical",
+            "attributes": {
+                "max health": 600,
+                "attack speed": 30
+            }
+        },
+        {
+            "name": "Mortal Punisher",
+            "cost": 1860,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 100,
+                "physical lifesteal": 15,
+                "attack speed": 15
+            }
+        },
+        {
+            "name": "Pure Sky",
+            "cost": 2120,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 100,
+                "max health": 500,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Doomsday",
+            "cost": 2160,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 60,
+                "physical lifesteal": 10,
+                "attack speed": 30
+            }
+        },
+        {
+            "name": "Bloodsweeper",
+            "cost": 1800,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 100,
+                "physical lifesteal": 25,
+                "max health": 500
+            }
+        },
+        {
+            "name": "Eternity Blade",
+            "cost": 2140,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 110,
+                "critical rate": 20
+            }
+        },
+        {
+            "name": "Master Sword",
+            "cost": 2100,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 80,
+                "max health": 500,
+                "max mana": 400,
+                "critical rate": 20
+            }
+        },
+        {
+            "name": "Sparkforged Dagger",
+            "cost": 1840,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 35,
+                "movement speed": 8
+            }
+        },
+        {
+            "name": "Shadow Ripper",
+            "cost": 1950,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 35,
+                "movement speed": 5,
+                "critical rate": 25
+            }
+        },
+        {
+            "name": "Axe of Torment",
+            "cost": 2090,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 85,
+                "max health": 500,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Siege Breaker",
+            "cost": 2680,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 170
+            }
+        },
+        {
+            "name": "Sunchaser",
+            "cost": 2050,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 25,
+                "movement speed": 5,
+                "critical rate": 10
+            }
+        },
+        {
+            "name": "Daybreaker",
+            "cost": 2760,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 50,
+                "attack speed": 30,
+                "critical rate": 10
+            }
+        },
+        {
+            "name": "Dreamforged - Tempest",
+            "cost": 2090,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 65,
+                "attack speed": 25
+            }
+        },
+        {
+            "name": "Dreamforged - Skypiercer",
+            "cost": 2130,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 100,
+                "max health": 800,
+                "critical rate": 10
+            }
+        },
+        {
+            "name": "Sunpool",
+            "cost": 3300,
+            "type": "Physical",
+            "attributes": {
+                "attack speed": 25,
+                "movement speed": 5,
+                "critical rate": 10
+            }
+        },
+        {
+            "name": "Sky Dome",
+            "cost": 3370,
+            "type": "Physical",
+            "attributes": {
+                "physical attack": 100,
+                "max health": 500,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Spell Tome",
+            "cost": 300,
+            "type": "Physical",
+            "attributes": {
+                "magical attack": 40
+            }
+        },
+        {
+            "name": "Sparkling Sapphire",
+            "cost": 190,
+            "type": "Physical",
+            "attributes": {
+                "max mana": 250
+            }
+        },
+        {
+            "name": "Alchemist's Amulet",
+            "cost": 130,
+            "type": "Physical",
+            "attributes": {
+                "mana regen": 10
+            }
+        },
+        {
+            "name": "Sage's Codex",
+            "cost": 425,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 25,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Primal Scepter",
+            "cost": 540,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 80
+            }
+        },
+        {
+            "name": "Grand Staff",
+            "cost": 820,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 120
+            }
+        },
+        {
+            "name": "Blood Clan's Grimoire",
+            "cost": 990,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 75
+            }
+        },
+        {
+            "name": "Sword of Glory",
+            "cost": 750,
+            "type": "Magical",
+            "attributes": {
+                "max health": 400,
+                "max mana": 400
+            }
+        },
+        {
+            "name": "Stone of Sorcery",
+            "cost": 890,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 90
+            }
+        },
+        {
+            "name": "Evolution Crystal",
+            "cost": 720,
+            "type": "Magical",
+            "attributes": {
+                "max health": 400,
+                "max mana": 250
+            }
+        },
+        {
+            "name": "Shattered Grail",
+            "cost": 900,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 60,
+                "mana regen": 15,
+                "cooldown reduction": 8
+            }
+        },
+        {
+            "name": "Nebulon Wood",
+            "cost": 970,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 70,
+                "max health": 300
+            }
+        },
+        {
+            "name": "Splendor",
+            "cost": 1990,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 160,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Ardent Dominator",
+            "cost": 1950,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 200,
+                "max mana": 600,
+                "mana regen": 15
+            }
+        },
+        {
+            "name": "Twilight Stream",
+            "cost": 2040,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 140,
+                "max health": 300,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Golden Blade",
+            "cost": 2070,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 160,
+                "attack speed": 20,
+                "movement speed": 5
+            }
+        },
+        {
+            "name": "Venomous Staff",
+            "cost": 2050,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 240,
+                "movement speed": 5,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Holy Grail",
+            "cost": 1900,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 180,
+                "max health": 500,
+                "cooldown reduction": 15
+            }
+        },
+        {
+            "name": "Void Staff",
+            "cost": 2110,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 240,
+                "max health": 500
+            }
+        },
+        {
+            "name": "Savant's Wrath",
+            "cost": 2230,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 240
+            }
+        },
+        {
+            "name": "Scepter of Reverberation",
+            "cost": 2100,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 240,
+                "movement speed": 7
+            }
+        },
+        {
+            "name": "Mask of Agony",
+            "cost": 2040,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 120,
+                "max health": 800,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Staves of Sorcery",
+            "cost": 2120,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 180,
+                "max health": 500,
+                "max mana": 400,
+                "movement speed": 8
+            }
+        },
+        {
+            "name": "Augur's Word",
+            "cost": 2150,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 140,
+                "max health": 1000,
+                "max mana": 350
+            }
+        },
+        {
+            "name": "Breakthrough Robe",
+            "cost": 2160,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 120,
+                "max health": 1000
+            }
+        },
+        {
+            "name": "Tome of Wisdom",
+            "cost": 2810,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 400,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Insatiable Tome",
+            "cost": 2090,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 180,
+                "max health": 1000,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Frozen Breath",
+            "cost": 2100,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 160,
+                "max health": 600,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Moon Goddes",
+            "cost": 3240,
+            "type": "Magical",
+            "attributes": {
+                "magical attack": 160,
+                "cooldown reduction": 10
+            }
+        },
+        {
+            "name": "Lightfoot Shoes",
+            "cost": 250,
+            "type": "Movement",
+            "attributes": {}
+        },
+        {
+            "name": "Boots of Fortitude",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {}
+        },
+        {
+            "name": "Boots of Resistance",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {}
+        },
+        {
+            "name": "Boots of Tranquility",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {}
+        },
+        {
+            "name": "Boots of the Arcane",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {
+                "mana regen": 15
+            }
+        },
+        {
+            "name": "Boots of Dexterity",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {
+                "attack speed": 20
+            }
+        },
+        {
+            "name": "Boots of Deftness",
+            "cost": 710,
+            "type": "Movement",
+            "attributes": {
+                "max health": 300
+            }
+        },
+        {
+            "name": "Hunting Knife",
+            "cost": 250,
+            "type": "Jungling",
+            "attributes": {}
+        },
+        {
+            "name": "Guerrilla Machete",
+            "cost": 700,
+            "type": "Jungling",
+            "attributes": {
+                "magical attack": 40
+            }
+        },
+        {
+            "name": "Relentless Blade",
+            "cost": 700,
+            "type": "Jungling",
+            "attributes": {
+                "physical attack": 25
+            }
+        },
+        {
+            "name": "Patrol Axe",
+            "cost": 700,
+            "type": "Jungling",
+            "attributes": {
+                "max health": 400
+            }
+        },
+        {
+            "name": "Runeblade",
+            "cost": 2160,
+            "type": "Jungling",
+            "attributes": {
+                "magical attack": 150,
+                "movement speed": 7,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Rapacious Bite",
+            "cost": 2160,
+            "type": "Jungling",
+            "attributes": {
+                "physical attack": 90,
+                "movement speed": 8,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Giant's Grip",
+            "cost": 2160,
+            "type": "Jungling",
+            "attributes": {
+                "max health": 1200,
+                "movement speed": 6,
+                "cooldown reduction": 5
+            }
+        },
+        {
+            "name": "Knowledge Gem",
+            "cost": 300,
+            "type": "Roaming",
+            "attributes": {
+                "movement speed": 5
+            }
+        },
+        {
+            "name": "Guardian",
+            "cost": 900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 500,
+                "movement speed": 6
+            }
+        },
+        {
+            "name": "Crimson Shadow",
+            "cost": 900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 500,
+                "movement speed": 6
+            }
+        },
+        {
+            "name": "Redemption",
+            "cost": 1900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 1000,
+                "movement speed": 10
+            }
+        },
+        {
+            "name": "Starspring",
+            "cost": 1900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 1000,
+                "movement speed": 10
+            }
+        },
+        {
+            "name": "Howl",
+            "cost": 1900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 1000,
+                "movement speed": 10
+            }
+        },
+        {
+            "name": "Radiance",
+            "cost": 1900,
+            "type": "Roaming",
+            "attributes": {
+                "max health": 1000,
+                "movement speed": 10
+            }
+        },
+        {
+            "name": "Resilient Agate",
+            "cost": 300,
+            "type": "Defense",
+            "attributes": {
+                "max health": 300
+            }
+        },
+        {
+            "name": "Cloth Jerkin",
+            "cost": 220,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 90
+            }
+        },
+        {
+            "name": "Anti-magic Cload",
+            "cost": 220,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 90
+            }
+        },
+        {
+            "name": "Cuirass of Swiftness",
+            "cost": 475,
+            "type": "Defense",
+            "attributes": {
+                "cooldown reduction": "5",
+                "max health": 200
+            }
+        },
+        {
+            "name": "Revitalising Crystal",
+            "cost": 140,
+            "type": "Defense",
+            "attributes": {
+                "health regen": 30
+            }
+        },
+        {
+            "name": "Scale Blade",
+            "cost": 780,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 90,
+                "max health": 400
+            }
+        },
+        {
+            "name": "Belt of Might",
+            "cost": 670,
+            "type": "Defense",
+            "attributes": {
+                "max health": 750
+            }
+        },
+        {
+            "name": "Energy Core",
+            "cost": 760,
+            "type": "Defense",
+            "attributes": {
+                "max health": 500
+            }
+        },
+        {
+            "name": "Clandestine Cape",
+            "cost": 1020,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 120,
+                "max health": 700,
+                "health regen": 50
+            }
+        },
+        {
+            "name": "Frosthold Targe",
+            "cost": 900,
+            "type": "Defense",
+            "attributes": {
+                "cooldown reduction": 10,
+                "max mana": 400,
+                "physical defense": 110
+            }
+        },
+        {
+            "name": "Protector's Cuirass",
+            "cost": 730,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 210
+            }
+        },
+        {
+            "name": "Nettle Gauntlet",
+            "cost": 710,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 30,
+                "physical defense": 160
+            }
+        },
+        {
+            "name": "Cape of Radiance",
+            "cost": 950,
+            "type": "Defense",
+            "attributes": {
+                "cooldown reduction": 5,
+                "physical defense": 90,
+                "health regen": 60
+            }
+        },
+        {
+            "name": "Darknight Breastplate",
+            "cost": 710,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 180
+            }
+        },
+        {
+            "name": "Spikemail",
+            "cost": 1950,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 30,
+                "physical defense": 360
+            }
+        },
+        {
+            "name": "Blood Rage",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 40,
+                "max health": 800
+            }
+        },
+        {
+            "name": "Pearl of Origin",
+            "cost": 1250,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 140,
+                "magical defense": 140
+            }
+        },
+        {
+            "name": "Frigid Charge",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 240,
+                "max health": 1000
+            }
+        },
+        {
+            "name": "Dragon's Rage",
+            "cost": 2000,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 150,
+                "magical defense": 75,
+                "max health": 1200
+            }
+        },
+        {
+            "name": "Blazing Cape",
+            "cost": 1950,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 240,
+                "max health": 1000
+            }
+        },
+        {
+            "name": "Overlord's Platemail",
+            "cost": 2150,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 100,
+                "magical defense": 50,
+                "max health": 1500
+            }
+        },
+        {
+            "name": "Dawnlight",
+            "cost": 1950,
+            "type": "Defense",
+            "attributes": {
+                "cooldown reduction": 10,
+                "physical defense": 240,
+                "health regen": 150
+            }
+        },
+        {
+            "name": "Ominous Premonition",
+            "cost": 2150,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 270,
+                "max health": 1200
+            }
+        },
+        {
+            "name": "Eye of Phoenix",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 240,
+                "max health": 1200,
+                "health regen": 100
+            }
+        },
+        {
+            "name": "Succubus Cloak",
+            "cost": 2080,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 200,
+                "max health": 1000,
+                "health regen": 100
+            }
+        },
+        {
+            "name": "Glacial Buckler",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "cooldown reduction": 20,
+                "max mana": 500,
+                "physical defense": 360
+            }
+        },
+        {
+            "name": "Sage's Sanctuary",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 140,
+                "magical defense": 140
+            }
+        },
+        {
+            "name": "Cuirass of Savagery",
+            "cost": 2050,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 30,
+                "physical defense": 220,
+                "max health": 900,
+                "movement speed": 5
+            }
+        },
+        {
+            "name": "Longnight Guardian",
+            "cost": 2110,
+            "type": "Defense",
+            "attributes": {
+                "magical defense": 360,
+                "max health": 1000
+            }
+        },
+        {
+            "name": "Frostscar's Embrace",
+            "cost": 2100,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 40,
+                "cooldown reduction": 10,
+                "max mana": 400,
+                "physical defense": 240,
+                "max health": 500
+            }
+        },
+        {
+            "name": "Phantom",
+            "cost": 3350,
+            "type": "Defense",
+            "attributes": {
+                "physical attack": 40,
+                "max health": 800
+            }
+        },
+        {
+            "name": "Winter",
+            "cost": 3350,
+            "type": "Defense",
+            "attributes": {
+                "physical defense": 240,
+                "max health": 1000
+            }
+        }
+    ],
+    "heroes": []
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Atlas</title>
+</head>
+<body>
+    <div id="honorofkings"></div>
+    <script>
+        eql = "";
+        equipments = [];
+        fetch('./data/honorofkings_bkp.json')
+            .then(response => response.json())  // Parse JSON
+            .then(hok => {
+            // Display the data
+            hok.equipments.forEach(e=> {
+                equipments.push(e.name+'<br>');
+            });
+            hok.equipments.forEach(eq=> {
+                eql += `<p>Equipment: ${eq.name}, Type: ${eq.type}, Price: ${eq.cost}</p>`;
+            });
+            document.getElementById('honorofkings').innerHTML = `
+                <p>Honor of Kings (王者荣耀)</p>
+                <p><strong>Name:</strong> ${hok.title}</p>
+                <p><strong>Description:</strong> ${hok.description}</p>
+                <div>
+                    ${equipments}
+                </div>
+            `;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
+</body>
+</html>
