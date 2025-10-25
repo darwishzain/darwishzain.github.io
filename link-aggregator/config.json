@@ -1,13 +1,21 @@
 {
     "name": "Hidari Shoya",
     "username": "hidarishoya",
-    "icon":"assets/hidarishoya-logo.png",
-    "backgroundcolor":"#00ac9f",
+    "icon":"assets/logo.png",
+    "profile":"assets/logo.png",
+    "theme":"dark",
+    "color":"#eaeaea",
+    "backgroundcolor":"#121212",
     "links": {
+        "madu":{
+            "name":"Katalog Produk Madu",
+            "img":"assets/madu.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
         "setelreferral":
         {
             "name": "Setel Referral",
-            "img": "https://www.setel.com/assets/logo.svg",
+            "icon": "https://www.setel.com/assets/logo.svg",
             "url": "https://www.setel.com/ref/tkcm7"
         },
         "lunoreferral":
