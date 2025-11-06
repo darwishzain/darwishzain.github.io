@@ -51,21 +51,93 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.bg-dark{
-  background-color: #555;
+/**DARK*/
+.bg-dark {
+  background-color: #555; /* background */
 }
-.la-dark{
-  color:#FAFAFA;
+
+.la-dark {
+  color: #FAFAFA; /* general font color */
 }
-.la-dark .bio{
-  background:#555;
-  
+
+.la-dark .la-social {
+  color: #FAFAFA;
+  background-color: transparent; /* no fill, just color contrast */
 }
-.la-dark .la-social{
-  color:#FAFAFA;
-  background-color:none;
-}
-.la-dark .la-link{
+
+.la-dark .la-link {
   background-color: #FAFAFA;
-  color:#555;
+  color: #555; /* contrast to dark background */
+}
+/**LIGHT*/
+.bg-light {
+  background-color: #FAFAFA;
+}
+
+.la-light {
+  color: #333;
+}
+
+.la-light .la-social {
+  color: #333;
+  background-color: transparent;
+}
+
+.la-light .la-link {
+  background-color: #333;
+  color: #FAFAFA;
+}
+/**BLUE*/
+.bg-blue {
+  background-color: #1E3A8A; /* deep navy */
+}
+
+.la-blue {
+  color: #E0F2FE; /* soft icy blue text */
+}
+
+.la-blue .la-social {
+  color: #E0F2FE;
+  background-color: transparent;
+}
+
+.la-blue .la-link {
+  background-color: #E0F2FE;
+  color: #1E3A8A;
+}
+/**GREEN*/
+.bg-green {
+  background-color: #14532D; /* deep forest green */
+}
+
+.la-green {
+  color: #DCFCE7; /* soft pale green */
+}
+
+.la-green .la-social {
+  color: #DCFCE7;
+  background-color: transparent;
+}
+
+.la-green .la-link {
+  background-color: #DCFCE7;
+  color: #14532D;
+}
+/**AMBER*/
+.bg-amber {
+  background-color: #92400E; /* warm dark amber */
+}
+
+.la-amber {
+  color: #FEF3C7; /* pale golden text */
+}
+
+.la-amber .la-social {
+  color: #FEF3C7;
+  background-color: transparent;
+}
+
+.la-amber .la-link {
+  background-color: #FEF3C7;
+  color: #92400E;
 }
