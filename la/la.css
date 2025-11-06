@@ -1,0 +1,71 @@
+#profile img{
+  width: clamp(60px, 15vw, 120px); /* scales with screen */
+  aspect-ratio: 1 / 1;             /* keeps it square */
+  border-radius: 50%;              /* circular */
+  object-fit: cover;               /* crops image nicely */
+  border: 2px solid #ccc;          /* soft border */
+  background-color: #F0F0F0;
+  margin-bottom: 6px;              /* space before username */
+  transition: all 0.3s ease;       /* smooth hover effect */
+}
+#profile img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#profile .bio{
+  width: 50%;
+  margin:auto;
+}
+#socials {
+  display: flex;
+  flex-wrap: wrap;          /* allow wrapping if many buttons */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically (optional) */
+  gap: 0.5rem;              /* space between buttons */
+  margin-top: 1rem;
+}
+#socials a{
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+#links a{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  max-width: 700px;          /* optional cap on desktop */
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#links a:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.bg-dark{
+  background-color: #555;
+}
+.la-dark{
+  color:#FAFAFA;
+}
+.la-dark .bio{
+  background:#555;
+  
+}
+.la-dark .la-social{
+  color:#FAFAFA;
+  background-color:none;
+}
+.la-dark .la-link{
+  background-color: #FAFAFA;
+  color:#555;
+}

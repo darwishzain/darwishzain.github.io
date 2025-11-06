@@ -1,0 +1,45 @@
+{
+    "name": "Hidari Shoya",
+    "username": "hidarishoya",
+    "icon":"assets/logo.png",
+    "profile":"assets/logo.png",
+    "bio":"",
+    "theme":"dark",
+    "color":"#eaeaea",
+    "backgroundcolor":"#121212",
+    "links": {
+        "madu":{
+            "name":"Katalog Produk Madu",
+            "img":"assets/madu.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "setelreferral":
+        {
+            "name": "Setel Referral",
+            "icon": "https://www.setel.com/assets/logo.svg",
+            "url": "https://www.setel.com/ref/tkcm7"
+        },
+        "lunoreferral":
+        {
+            "name": "Luno Referral",
+            "icon":"https://framerusercontent.com/images/iwCmTrjcCzqEqGCgCGVr84H7oAY.png?scale-down-to=512",
+            "url": "https://www.luno.com/invite/AE8932"
+        },
+        "redbusreferral":
+        {
+            "name": "Redbus Referral",
+            "url": "https://m6pe.app.link/referral_onboarding?referralCode=reder9m0&referralAmount=20"
+        },
+        "Kinokuniya Affiliate":
+        {
+            "name": "Kinokuniya Affiliate",
+            "url": "https://atmy.me/go/yTXODEiH"
+        }
+    },
+    "socials": {
+        "tiktok": "https://www.tiktok.com/@hidarishoya",
+        "instagram": "https://www.instagram.com/hidarishoya",
+        "daun":"https://daun.me/hidarishoya",
+        "twitch": "https://www.twitch.tv/hidarishoya"
+    }
+}
