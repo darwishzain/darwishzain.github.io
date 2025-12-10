@@ -8,12 +8,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #1A1A1D;
+    color: #F0F0F0;
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: #fff;
+    color: #00D4FF;
+    background-color: #121212;
     padding: 1rem;
 }
 
@@ -37,69 +39,58 @@ header ul li {
 }
 
 header ul li a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
-
-/* Hero Section */
-.hero {
-    padding: 2rem;
+section{
     text-align: center;
-    background: #f4f4f4;
+    padding: 5rem 0;
 }
-
-/* About Me Section */
-section {
-    padding: 2rem;
+section h2{
+    color: #F0F0F0;
 }
-.sectiondark{
-  background-color: #e2e2e2;
+.link{
+    color: #00D4FF;
+    margin: 5px;
 }
-.sectionlight{
-  background-color: #f4f4f4;
-}
-
-#about {
-    background-color: #e2e2e2;
-}
-
-/* Projects Section */
-.project-list {
-    display: flex;
-    gap: 1rem;
-}
-
-.project {
-    flex: 1;
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-#social-media {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
-}
-
-#social-media h2 {
-    margin-bottom: 1rem;
-}
-
-.social-icons {
+#projects div{
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
 }
-
-.social-icon img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
+#projects div div{
+    background-color: #121212;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
 }
-
-.social-icon:hover img {
-    transform: scale(1.2);
+#projects div div:hover{
+    transform: translateY(-5px);
+}
+#projects h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+#projects p {
+    font-size: 0.95em;
+    line-height: 1.4em;
+}
+/* Links styling */
+#projects a.link {
+    margin-left: 5px;
+    color: #00D4FF;
+    text-decoration: none;
+}
+#projects a.link:hover {
+    text-decoration: underline;
+}
+#socialmedia div a{
+    margin: 10px;
 }
 
 /* Contact Form */
@@ -132,6 +123,6 @@ form button {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #333;
-    color: #fff;
+    background-color: #121212;
+    color: #00D4FF;
 }
