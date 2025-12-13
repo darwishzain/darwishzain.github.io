@@ -15,6 +15,8 @@
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#educations">Education</a></li>
                 <li><a href="#activity">Extracurricular Activity</a></li>
                 <li><a href="#socialmedia">Connect with Me</a></li>
                 <li>
@@ -90,6 +92,56 @@
         </div>
     </section>
 
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div>
+            <div>
+                <h3>Programming Languages</h3>
+                <p>
+                    Proficient in Python and fullstack web development with PHP
+                </p>
+            </div>
+            <br>
+            <div>
+                <h3>Frameworks and Libraries</h3>
+                <p>
+                    Experienced in building desktop applications using Qt6 framework, web applications using React.js library and minor experiences in Laravel
+                </p>
+            </div>
+            <br>
+            <div>
+                <h3>Tools and Platforms</h3>
+                <p>
+                    Experienced with Git version control, GitHub repository hosting, and VS Code development environment
+                </p>
+            </div>
+            <div>
+                <h3>Database Management</h3>
+                <p>
+                    Knowledgeable in MySQL database design, management, and optimization
+                </p>
+            </div>
+            <br>
+            <div>
+                <h3>Operating Systems</h3>
+                <p>
+                    Prefer to work on Debian based Linux distributions, but comfortable working on Windows
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="educations">
+        <h2>Education</h2>
+        <div>
+            <h3>Bachelor of Computer Science (Hons) in Software Engineering</h3>
+            <p>Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA), 2019 - 2026 (Expected)</p>
+        </div>
+        <br>
+        <div>
+            <h3>Malaysian Matriculation Certificate Life Science</h3>
+            <p>Kolej Matrikulasi Kelantan (KMKt), 2018 - 2019</p>
+        </div>
+    </section>
     <section id="activity">
         <h2>Extracurricular Activity</h2>
         <div>
@@ -124,28 +176,24 @@
             </ul>
         </div>
     </section>
+
+    <section id="qr">
+        <h2>Files</h2>
+        <div>
+            <div id="getresume" style="text-align: center;"></div>
+            <p>Scan to get my Resume</p>
+        </div>
+    </section>
     <section id="socialmedia">
         <h2>Connect With Me</h2>
         <br>
         <div>
-            <a href="https://linkedin.com/in/darwishzain" target="_blank" class="social-icon" id="linkedin">
-                <i class="link fa fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/darwishzain" target="_blank" class="social-icon" id="github">
-                <i class="link fa fa-github"></i>
-            </a>
-            <a href="https://facebook.com/darwishzainstd" target="_blank" class="social-icon" id="facebook">
-                <i class="link fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com/darwishzainstd" target="_blank" class="social-icon" id="instagram">
-                <i class="link fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://tiktok.com/@darwishzainstd" target="_blank" class="social-icon" id="tiktok">
-                <i class="link fa-brands fa-tiktok"></i>
-            </a>
-            <a href="mailto:darwishzainstudio@gmail.com" target="_blank" class="social-icon" id="email">
-                <i class="link fa fa-envelope"></i>
-            </a>
+            <a href="https://linkedin.com/in/darwishzain" target="_blank" class="social-icon" id="linkedin"><i class="link fa fa-linkedin"></i></a>
+            <a href="https://github.com/darwishzain" target="_blank" class="social-icon" id="github"><i class="link fa fa-github"></i></a>
+            <a href="https://facebook.com/darwishzainstd" target="_blank" class="social-icon" id="facebook"><i class="link fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/darwishzainstd" target="_blank" class="social-icon" id="instagram"><i class="link fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@darwishzainstd" target="_blank" class="social-icon" id="tiktok"><i class="link fa-brands fa-tiktok"></i></a>
+            <a href="mailto:darwishzainstudio@gmail.com" target="_blank" class="social-icon" id="email"><i class="link fa fa-envelope"></i></a>
         </div>
     </section>
 
@@ -170,5 +218,17 @@
     <footer>
         <p>&copy; <script>document.write(new Date().getFullYear());</script> Darwish Mat Zain</p>
     </footer>
+    <script src="davidshimjs-qrcodejs-04f46c6/qrcode.min.js"></script>
+    <script>
+        // QR Code Generation
+        var qrcode = new QRCode(document.getElementById("getresume"), {
+            text: "file/Darwish_MatZain_Resume.pdf",
+            width: 128,
+            height: 128,
+            colorDark : "#121212",
+            colorLight : "#F0F0F0",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>
