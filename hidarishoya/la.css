@@ -1,99 +1,110 @@
-/* Common base */
-.la-btn {
-    display: inline-block;
-    margin: 0.3rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s, color 0.3s;
-}
 
-/* ===========================
-   LIGHT THEME
-   =========================== */
-.la-light {
-  background-color: #ffffff;
-  color: #222222;
+/**THEME*/
+/**Midnight*/
+:root, [th-theme="default"], [th-theme=""], [th-theme="midnight"] {
+  --th-bg: #0B0E14;
+  --th-surface: #1A1D23;
+  --th-fg: #E6EDF3;
+  --th-accent: #58A6FF;
+  --th-border: #30363D;
 }
-
-/* --- Buttons (darker shade) --- */
-.la-light .la-btn {
-  background-color: #1a1a1a;  /* very dark gray */
-  color: #ffffff;
-  border-radius: 6px;
+/**Nordic*/
+[th-theme="nordic"] {
+  --th-bg: #2E3440;
+  --th-surface: #3B4252;
+  --th-fg: #ECEFF4;
+  --th-accent: #88C0D0;
+  --th-border: #4C566A;
+}
+/**Cyber*/
+[th-theme="cyber"] {
+  --th-bg: #000000;
+  --th-surface: #121212;
+  --th-fg: #FFFFFF;
+  --th-accent: #BB86FC;
+  --th-border: #2C2C2C;
+}
+/**Forest*/
+[th-theme="forest"] {
+  --th-bg: #1B1F13;
+  --th-surface: #24291A;
+  --th-fg: #E2E4DC;
+  --th-accent: #E67E22;
+  --th-border: #3E4431;
+}
+/**Terminal*/
+[th-theme="terminal"] {
+  --th-bg: #0D110D;
+  --th-surface: #161B16;
+  --th-fg: #20C20E;
+  --th-accent: #D2FF00;
+  --th-border: #253325;
+}
+.th-bg { background-color: var(--th-bg) !important; }
+.th-surface { background-color: var(--th-surface) !important; }
+.th-fg { color: var(--th-fg) !important; }
+.th-accent-text { color: var(--th-accent) !important; }
+.th-border { border: 1px solid var(--th-border) !important; }
+html, body {
+  height: 100%;
+}
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+#profile img{
+  width: clamp(60px, 15vw, 120px); /* scales with screen */
+  aspect-ratio: 1 / 1;             /* keeps it square */
+  border-radius: 50%;              /* circular */
+  object-fit: cover;               /* crops image nicely */
+  background-color: var(--th-accent);
+  margin-bottom: 6px;              /* space before username */
+  transition: all 0.3s ease;       /* smooth hover effect */
+}
+#profile img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--th-accent);
+}
+#socials {
+  display: flex;
+  flex-wrap: wrap;          /* allow wrapping if many buttons */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically (optional) */
+  gap: 0.5rem;              /* space between buttons */
+  margin-top: 1rem;
+}
+#socials a{
+  display: inline-block;
+  margin: 0.3rem;
   padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, color 0.3s;
 }
-
-.la-light .la-btn:hover {
-  background-color: #2b2b2b;  /* slightly lighter dark */
-  transform: translateY(-2px);
+#socials a:hover{
+  color: var(--th-accent) !important;
 }
-
-/* --- Eyecatcher Links (softer dark shade) --- */
-.la-light .links {
-  background-color: #2f2f2f;  /* softer graphite gray */
-  color: #ffffff;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 700px;
+#links a{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
-}
-
-.la-light .links:hover {
-  background-color: #3a3a3a;  /* just a touch lighter */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-}
-
-
-/* ===========================
-   DARK THEME
-   =========================== */
-.la-dark {
-  background-color: #121212;
-  color: #eeeeee;
-}
-
-/* --- Buttons (lighter shade) --- */
-.la-dark .la-btn {
-  background-color: #f2f2f2;  /* bright light-gray button */
-  color: #111111;
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.la-dark .la-btn:hover {
-  background-color: #e4e4e4;  /* slightly dimmer on hover */
-  transform: translateY(-2px);
-}
-
-/* --- Eyecatcher Links (softer light shade) --- */
-.la-dark .links {
-  background-color: #d5d5d5;  /* gentle gray, less bright than btn */
-  color: #111111;
-  border-radius: 10px;
   width: 80%;
-  max-width: 700px;
-  text-align: center;
-  padding: 1rem 1.5rem;
+  max-width: 700px;          /* optional cap on desktop */
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-.la-dark .links:hover {
-  background-color: #c9c9c9;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+#links a:hover{
   transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--th-accent);
 }
