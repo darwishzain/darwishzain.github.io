@@ -14,70 +14,57 @@ async function initpage(){
                 document.body.setAttribute('th-theme', activetheme);
                 let favicon = document.querySelector('link[rel="icon"]');
                 //* FAVICON
-                if(userdata.icon && userdata.icon.trim !== ""){
-                    favicon.href = userdata.icon;
+                if(userdata.profile.icon && userdata.profile.icon.trim !== ""){
+                    favicon.href = userdata.profile.icon;
                 }
                 else{
                     favicon.href = 'assets/default-icon.png';
                 }
                 //* PROFILE
                 const profileimg = document.createElement('img');
-                if(userdata.profile && userdata.profile.trim !== ""){
-                    profileimg.src = userdata.profile;
+                if(userdata.profile.img && userdata.profile.img.trim !== ""){
+                    profileimg.src = userdata.profile.img;
                 }
                 else{
                     profileimg.src = 'assets/default-profile.png';
                 }
                 profileimg.classList.add('rounded-circle');
                 document.getElementById('profile').appendChild(profileimg);
-                if(userdata.username && userdata.username.trim !== ""){
-                    document.title = '@'+userdata.username;
+                if(userdata.profile.username && userdata.profile.username.trim !== ""){
+                    if(userdata.profile.name && userdata.profile.name.trim !== ""){
+                        document.title = userdata.profile.name;
+                    }
+                    else{
+                        document.title = '@'+userdata.profile.username;
+                    }
                     const username = document.createElement('h3');
-                    username.textContent = '@'+userdata.username;
+                    username.textContent = '@'+userdata.profile.username;
                     document.getElementById('profile').appendChild(username);
                 }
-                if(userdata.bio && userdata.bio.trim !== ""){
+                if(userdata.profile.bio && userdata.profile.bio.trim !== ""){
                     const bio = document.createElement('p');
                     bio.classList.add('w-50','mx-auto','opacity-75');
-                    bio.textContent = `${userdata.bio}`;
+                    bio.textContent = `${userdata.profile.bio}`;
                     document.getElementById('profile').appendChild(bio);
                 }
-                document.getElementById('profile').classList.add('th-fg');
-                //* SOCIALS
-                for (const [id, social] of Object.entries(userdata.socials)) {
-                    const socialelement = document.createElement('a');
-                    label = social.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-                    socialelement.href = social.url;
-                    socialelement.classList.add('th-fg');
-                    socialelement.target = '_blank';
-                    socialelement.title = label;
-                    if(social.icon && social.icon.trim() !== "") {
-                        const socialimg = document.createElement('i');
-                        socialimg.className = social.icon;
-                        socialelement.appendChild(socialimg);
+                userdata.order.forEach(section => {
+                    sectiondata = userdata.sections[section];
+                    switch(section){
+                        case 'socials':
+                            rendersocials(sectiondata);
+                            break;
+                        case 'featured':
+                            break;
+                        case 'products':
+                            renderproducts(sectiondata);
+                            break;
+                        case 'links':
+                            renderlinks(sectiondata);
+                            break;
+                        default:
+                            break;
                     }
-                    else
-                    {
-                        socialelement.textContent = social.name;
-                    }
-                    document.getElementById('socials').appendChild(socialelement);
-                }
-                //* LINKS
-                for (const [id,link] of Object.entries(userdata.links)) {
-                    const linkelement = document.createElement('a');
-                    linkelement.href = link.url;
-                    linkelement.target = '_blank';
-                    linkelement.textContent = link.name;
-                    linkelement.classList.add('th-surface', 'th-accent-text', 'th-border');
-                    if(link.img && link.img.trim() !== "") {
-                        const linkimg = document.createElement('img');
-                        linkimg.src = link.img;
-                        linkimg.alt = link.name;
-                        linkimg.style = 'display: block;margin-bottom: 10px;height: 50vh;max-width: 100%;';
-                        linkelement.appendChild(linkimg);
-                    }
-                    document.getElementById('links').appendChild(linkelement);
-                }
+                });
             }
         }
         catch(err){
@@ -93,6 +80,69 @@ async function initpage(){
         return;
     }
 
+}
+function rendersocials(socials){
+    const container = document.createElement('div');
+    container.id = 'socials';
+    for (const [id, social] of Object.entries(socials)) {
+        const element = document.createElement('a');
+        const label = social.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        element.href = social.url;
+        element.classList.add('th-fg');
+        element.target = '_blank';
+        element.title = label;
+        if(social.icon && social.icon.trim() !== "") {
+            const socialimg = document.createElement('i');
+            socialimg.className = social.icon;
+            element.appendChild(socialimg);
+        }
+        else
+        {
+            element.textContent = social.name;
+        }
+        container.appendChild(element);
+    }
+    document.getElementById('sections').appendChild(container);
+}
+function renderproducts(products)
+{
+    const container = document.createElement('div');
+    container.id = 'products';
+    container.style = 'display: grid; grid-template-columns: repeat(3,1fr); gap: 10px;';
+    for (const [id,product] of Object.entries(products ?? {}))
+    {
+        const element = document.createElement('a');
+        element.textContent = product.label;
+        element.style = 'border-radius: 10px;';
+        element.classList.add('th-surface', 'th-accent-text', 'th-border', 'p-2', 'm-2','text-decoration-none','d-block','text-center');
+        // Add Image if it exists
+        if (product.img && product.img.trim() !== "") {
+            const img = document.createElement('img');
+            img.src = product.img;
+            img.alt = product.label;
+            img.style = 'display: block; margin: 0 auto 10px auto; max-height: 30vh; max-width: 100%; object-fit: contain;';
+            element.appendChild(img);
+        }
+        if (product.url && product.url.trim() !== "") {
+            element.href = product.url;
+            element.target = '_blank';
+        }
+        container.appendChild(element);
+    }
+    document.getElementById('sections').appendChild(container);
+}
+function renderlinks(links){
+    const container = document.createElement('div');
+    container.id = 'links';
+    for (const [id,link] of Object.entries(links)) {
+        const element = document.createElement('a');
+        element.href = link.url;
+        element.target = '_blank';
+        element.textContent = link.name;
+        element.classList.add('th-surface', 'th-accent-text', 'th-border');
+        container.appendChild(element);
+    }
+    document.getElementById('sections').appendChild(container);
 }
 async function initedit(){
     try{
@@ -152,7 +202,20 @@ function errormessage(message){
     document.title = message;
 }
 document.addEventListener('DOMContentLoaded', () => {
-    footertxt = `<footer class="th-bg th-fg py-3 mt-5">
+    footertxt = `
+    <footer class="th-bg th-fg py-3 mt-5">
+        <div class="text-center mb-2">
+            <p class="mb-0">
+                Want your own link aggregator?
+                <a href="https://github.com/darwishzain/link-aggregator" class="th-accent-text fw-bold" style="text-decoration: none;">
+                    Build your own
+                </a>
+                or
+                <a href="https://github.com/darwishzain/link-aggregator" class="th-accent-text fw-bold" style="text-decoration: none;">
+                    Create yours
+                </a>
+            </p>
+        </div>
         <div class="container text-center">
             <small>
                 © 2025 Darwish Zain Studio. All rights reserved. |

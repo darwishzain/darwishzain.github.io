@@ -1,23 +1,119 @@
 {
-    "name": "Hidari Shoya",
-    "username": "hidarishoya",
-    "icon": "assets/hidarishoya-icon.png",
-    "profile":"assets/hidarishoya-profile.png",
-    "bio":"Trying to be a streamer",
+    "profile":{
+        "username":"hidarishoya",
+        "name":"Hidari Shoya",
+        "img":"assets/hidarishoya-profile.png",
+        "bio":"Trying to be a livestreamer",
+        "icon": "assets/hidarishoya-icon.png"
+    },
     "theme":"midnight",
-    "links": {
-        "0": {
-            "name": "Luno Referral",
-            "url": "https://www.luno.com/wallet/rewards/enter_code?code=AE8932"
+    "order":["socials","featured","products","links"],
+    "sections":{
+        "socials": {
+            "0":{
+                "name":"github",
+                "url":"https://github.com/darwishzain",
+                "icon":"bi bi-github"
+            },
+            "1":{
+                "name":"Twitch",
+                "url":"https://twitch.tv/hidarishoya",
+                "icon":"bi bi-twitch"
+            },
+            "2":{
+                "name":"Daun",
+                "url":"https://daun.me/hidarishoya",
+                "icon":"bi bi-leaf-fill"
+            },
+            "3":{
+                "name":"Instagram",
+                "url":"https://instagram.com/hidarishoya",
+                "icon":"bi bi-instagram"
+            },
+            "4":{
+                "name":"Youtube",
+                "url":"https://youtube.com/@hidarishoya",
+                "icon":"bi bi-youtube"
+            },
+            "5":{
+                "name":"Tiktok",
+                "url":"https://tiktok.com/@hidarishoya",
+                "icon":"bi bi-tiktok"
+            },
+            "6":{
+                "name":"Signal",
+                "url":"https://signal.me/#eu/i2GEFe4cb2NwGbH9jvUGeqxsMNSp2LZuU1OO_P9JBkULq4L_jnNJ0b-cMnQHfqe0",
+                "icon":"bi bi-signal"
+            }
         },
-        "1": {
-            "name": "Setel Referral",
-            "img": "https://www.setel.com/assets/logo.svg",
-            "url": "https://www.setel.com/ref/tkcm7"
+        "featured":{
+
         },
-        "2": {
-            "name": "Kinokuniya Affiliate",
-            "url": "https://atmy.me/go/yTXODEiH"
+        "products":{
+            "030":{
+                "label":"Honey Squeeze 350g",
+                "type":"product",
+                "img":"assets/030.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "035":{
+                "label":"Honey Lime 350g",
+                "type":"product",
+                "img":"assets/035.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "050":{
+                "label":"Madu Stick 50",
+                "type":"product",
+                "img":"assets/200.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "072":{
+                "label":"Honey Lime 720g",
+                "type":"product",
+                "img":"assets/072.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "100":{
+                "label":"Madu Stick 100",
+                "type":"product",
+                "img":"assets/100.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "200":{
+                "label":"Madu Stick 200",
+                "type":"product",
+                "img":"assets/200.jpeg",
+                "url":"https://wa.me/c/601137535178"
+            },
+            "luno":{
+                "label": "Luno",
+                "type":"referral",
+                "img":"https://framerusercontent.com/images/iwCmTrjcCzqEqGCgCGVr84H7oAY.png",
+                "url": "https://www.luno.com/wallet/rewards/enter_code?code=AE8932"
+            },
+            "setel":{
+                "label": "Setel",
+                "type":"referral",
+                "img": "https://www.setel.com/assets/logo.svg",
+                "url": "https://www.setel.com/ref/tkcm7"
+            },
+            "kinokuniya":{
+                "label": "Kinokuniya",
+                "type":"affiliate",
+                "img":"https://malaysia.kinokuniya.com/assets/logo/logo_MALAYSIA-1358e40cbb734e5456ca05bdf290ad86.png",
+                "url":"https://atmy.me/go/yTXODEiH"
+            }
+        },
+        "links": {
+            "1": {
+                "name":"JSON Link Aggregator",
+                "url":"https://github.com/darwishzain/link-aggregator"
+            },
+            "2": {
+                "name": "Live Streaming Toolkit",
+                "url": "https://github.com/darwishzain/stream-toolkit"
+            }
         }
     },
     "socials": {
@@ -57,7 +153,73 @@
             "icon":"bi bi-signal"
         }
     },
-    "products":{
+    "featured":{
 
+    },
+    "products":{
+        "030":{
+            "label":"Honey Squeeze 350g",
+            "type":"product",
+            "img":"assets/030.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "035":{
+            "label":"Honey Lime 350g",
+            "type":"product",
+            "img":"assets/035.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "050":{
+            "label":"Madu Stick 50",
+            "type":"product",
+            "img":"assets/200.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "072":{
+            "label":"Honey Lime 720g",
+            "type":"product",
+            "img":"assets/072.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "100":{
+            "label":"Madu Stick 100",
+            "type":"product",
+            "img":"assets/100.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "200":{
+            "label":"Madu Stick 200",
+            "type":"product",
+            "img":"assets/200.jpeg",
+            "url":"https://wa.me/c/601137535178"
+        },
+        "luno":{
+            "label": "Luno",
+            "type":"referral",
+            "img":"https://framerusercontent.com/images/iwCmTrjcCzqEqGCgCGVr84H7oAY.png",
+            "url": "https://www.luno.com/wallet/rewards/enter_code?code=AE8932"
+        },
+        "setel":{
+            "label": "Setel",
+            "type":"referral",
+            "img": "https://www.setel.com/assets/logo.svg",
+            "url": "https://www.setel.com/ref/tkcm7"
+        },
+        "kinokuniya":{
+            "label": "Kinokuniya",
+            "type":"affiliate",
+            "img":"https://malaysia.kinokuniya.com/assets/logo/logo_MALAYSIA-1358e40cbb734e5456ca05bdf290ad86.png",
+            "url":"https://atmy.me/go/yTXODEiH"
+        }
+    },
+    "links": {
+        "1": {
+            "name":"JSON Link Aggregator",
+            "url":"https://github.com/darwishzain/link-aggregator"
+        },
+        "2": {
+            "name": "Live Streaming Toolkit",
+            "url": "https://github.com/darwishzain/stream-toolkit"
+        }
     }
 }
